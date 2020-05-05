@@ -5,9 +5,9 @@
   <subtitle>Life</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.martinhyj.github.io/"/>
+  <link href="https://www.martinhyj.xyz/"/>
   <updated>2020-05-05T01:42:29.237Z</updated>
-  <id>https://www.martinhyj.github.io/</id>
+  <id>https://www.martinhyj.xyz/</id>
   
   <author>
     <name>martin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>three</title>
-    <link href="https://www.martinhyj.github.io/2020/05/03/three/"/>
-    <id>https://www.martinhyj.github.io/2020/05/03/three/</id>
+    <link href="https://www.martinhyj.xyz/2020/05/03/three/"/>
+    <id>https://www.martinhyj.xyz/2020/05/03/three/</id>
     <published>2020-05-03T12:50:17.000Z</published>
     <updated>2020-05-05T01:42:29.237Z</updated>
     
@@ -36,15 +36,15 @@
     </summary>
     
     
-      <category term="devotion" scheme="https://www.martinhyj.github.io/categories/devotion/"/>
+      <category term="devotion" scheme="https://www.martinhyj.xyz/categories/devotion/"/>
     
     
   </entry>
   
   <entry>
     <title>Two</title>
-    <link href="https://www.martinhyj.github.io/2020/04/11/two/"/>
-    <id>https://www.martinhyj.github.io/2020/04/11/two/</id>
+    <link href="https://www.martinhyj.xyz/2020/04/11/two/"/>
+    <id>https://www.martinhyj.xyz/2020/04/11/two/</id>
     <published>2020-04-11T09:29:26.387Z</published>
     <updated>2020-04-19T09:29:26.000Z</updated>
     
@@ -69,15 +69,15 @@
     </summary>
     
     
-      <category term="term" scheme="https://www.martinhyj.github.io/categories/term/"/>
+      <category term="term" scheme="https://www.martinhyj.xyz/categories/term/"/>
     
     
   </entry>
   
   <entry>
     <title>One</title>
-    <link href="https://www.martinhyj.github.io/2020/04/10/one/"/>
-    <id>https://www.martinhyj.github.io/2020/04/10/one/</id>
+    <link href="https://www.martinhyj.xyz/2020/04/10/one/"/>
+    <id>https://www.martinhyj.xyz/2020/04/10/one/</id>
     <published>2020-04-10T09:29:26.000Z</published>
     <updated>2020-04-11T09:29:26.000Z</updated>
     
@@ -97,12 +97,12 @@
     </summary>
     
     
-      <category term="record" scheme="https://www.martinhyj.github.io/categories/record/"/>
+      <category term="record" scheme="https://www.martinhyj.xyz/categories/record/"/>
     
-      <category term="memory" scheme="https://www.martinhyj.github.io/categories/record/memory/"/>
+      <category term="memory" scheme="https://www.martinhyj.xyz/categories/record/memory/"/>
     
     
-      <category term="life" scheme="https://www.martinhyj.github.io/tags/life/"/>
+      <category term="life" scheme="https://www.martinhyj.xyz/tags/life/"/>
     
   </entry>
   
