@@ -1,1 +1,1 @@
-[浏览私人网站](www.martinhyj.xyz)
+[看一看我的网站](http://www.martinhyj.xyz)
