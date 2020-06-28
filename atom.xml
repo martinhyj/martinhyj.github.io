@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.martinhyj.xyz/"/>
-  <updated>2020-06-05T17:03:28.215Z</updated>
+  <updated>2020-06-28T03:28:26.054Z</updated>
   <id>https://www.martinhyj.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Marxism1</title>
+    <link href="https://www.martinhyj.xyz/2020/06/28/Marxism/"/>
+    <id>https://www.martinhyj.xyz/2020/06/28/Marxism/</id>
+    <published>2020-06-28T02:29:17.000Z</published>
+    <updated>2020-06-28T03:28:26.054Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><h1 id="人类社会及其发展规律"><a href="#人类社会及其发展规律" class="headerlink" title="人类社会及其发展规律"></a>人类社会及其发展规律</h1></li><li><h2 id="社会基本矛盾"><a href="#社会基本矛盾" class="headerlink" title="社会基本矛盾"></a>社会基本矛盾</h2></li><li><p>社会存在,<code>社会生活的物质方面，包括自然地理环境、人口因素、物质生产方式</code></p></li><li><p>社会意识，<code>社会生活的精神方面；根据主体分为：个体意识，群体意识； 根据不同层次：社会心理，社会意识</code></p></li></ul><ul><li>生产力：<code>劳动资料，劳动对象，劳动者</code></li><li>生产关系：<code>进行生产时，人们相互之间的关系与联系</code></li><li>生产力决定生产关系<code>手推磨产生的是封建主的社会，蒸汽磨产生的是工业资本家的社会</code></li><li>生产关系对生产力具有能动的反作用，<code>当生产关系适合生产力发展的客观要求时，对生产力的发展起推动作用，当生产关系不适合生产力发展的客观要求时，就会阻碍生产力的发展。</code></li><li>经济基础，<code>是由社会发展到一定阶段的生产力所决定的生产关系的总和</code></li><li>上层建筑,<code>是指建立在一定经济基础上的意识形态以及与之相对应的制度、组织、设施</code></li><li><code>与生产力，生产关系一样，经济基础决定上层建筑，上层建筑反作用于经济基础，当其为适合生产力发展要求的经济基础服务时，就成为推动社会发展的进步力量；反之，当它为落后的经济基础服务时，就成为阻碍社会发展的消极力量</code></li><li><strong>生产力与生产关系矛盾运动的规律和经济基础和上层建筑矛盾运动的规律，是人类社会发展的一般规律。它们界定了社会形态的更替和历史发展的基本趋势</strong></li></ul><p>​     </p><ul><li><h2 id="社会历史发展的动力"><a href="#社会历史发展的动力" class="headerlink" title="社会历史发展的动力"></a>社会历史发展的动力</h2></li></ul><ol><li>社会基本矛盾</li><li>社会主要矛盾</li></ol><ul><li><p>阶级斗争</p></li><li><p>社会革命</p></li><li><p>改革</p></li><li><p>科学技术：<code>生产方式、生产方式、思维方式； 双刃剑</code></p></li><li></li><li><h2 id="人民群众的作用"><a href="#人民群众的作用" class="headerlink" title="人民群众的作用"></a>人民群众的作用</h2></li><li><p>唯物史观，<code>群众史观</code></p></li><li><p>唯心史观，<code>英雄史观</code></p></li><li><p><strong>人民群众<code>一切对社会历史发展起推动的人，指社会人口中绝大多数人</code>是历史的创造者</strong></p></li></ul><ol><li>物质财富的创造者</li><li>精神财富的创造者</li><li>社会变革的决定力量</li></ol><ul><li><strong>个人：历史人物，普通个人</strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;人类社会及其发展规律&quot;&gt;&lt;a href=&quot;#人类社会及其发展规律&quot; class=&quot;headerlink&quot; title=&quot;人类社会及其发展规律&quot;&gt;&lt;/a&gt;人类社会及其发展规律&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;社会基本矛盾&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+    
+      <category term="Philosophy" scheme="https://www.martinhyj.xyz/categories/Philosophy/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Sassy Girl</title>
@@ -73,17 +99,22 @@
     <published>2020-04-11T09:29:26.387Z</published>
     <updated>2020-04-19T09:29:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gg1e5kw10gj30hs0c4q73.jpg" alt=""></p><p>2020</p><p>:4</p><ul><li><p>Framework     架构</p></li><li><p>Architecture  架构</p></li><li><p>Opacity       不透明性，模糊</p></li><li><p>Alignment     对齐</p></li><li><p>Animate       动画，动态</p></li><li><p>Parallel      平行的，同时的</p></li><li><p>Duration      持续时间</p></li><li><p>Configuration 配置，布局，构造，结构</p></li><li><p>Syntax        语法，句法</p></li><li><p>Implicit      隐式的，不直接言明的</p></li><li><p>Delegate      委托，代表，授权</p></li><li><p>Priority      优先级，优先地</p></li><li><p>Constraint    约束，限制</p></li><li><p>Scale         规模，比例       </p></li><li><p>Appearance    外观，外貌</p></li><li><p>Drag          拖动</p></li><li><p>Clip          剪切</p></li><li><p>Paste         粘贴</p></li><li><p>Interaction   交互，交流，互动</p></li><li><p>Thread        线，线程</p></li><li><p>Multiplex     复用，多重</p></li><li><p>Map           映现，映射</p></li><li><p>DeadLock      死锁</p></li><li><p>Diagram       图，图表，示意图</p></li><li><p>View          视图</p></li><li><p>Inner         内部，内部的</p></li><li><p>Maintenance   维护</p></li><li><p>Oriented      使面向，使朝向</p></li><li><p>Advanced      高级（设置，选项）</p></li><li><p>Collaboration 合作，协作</p></li></ul><p>:5</p><ul><li><p>Collapse      重叠，折叠</p></li><li><p>Interval      间隔，时距</p></li><li><p>Radio         单选框</p></li><li><p>Checkbox      复选框</p></li><li><p>Prototype     原型，雏型</p></li><li><p>Thrashing     颠簸，抖动</p></li><li><p>Engine        引擎，发动机</p></li><li><p>Horizontal    水平的</p></li><li><p>Vertical      垂直的</p></li><li><p>Lateral       侧面的，横向的</p></li><li><p>Muscle        肌肉，威信</p></li></ul><p>:6</p><ul><li><p>Semaphore     信号量，信号标</p></li><li><p>Oolong        乌龙茶  </p></li><li><p>Filter        过滤，过滤器</p></li><li><p>Integrate     集成，合并</p></li><li><p>Separator     分隔符</p></li><li><p>Fragment      碎片，片段</p></li><li><p>Comment       评论，描述，批评</p></li><li><p>Register      登记，注册</p></li><li><p>Variant       变形，变体</p></li><li><p>Macro         宏指令</p></li><li><p>Meta-Object   元对象</p></li><li><p>Loop          回路，循环</p></li><li><p>Analogous     类似的</p></li><li><p>Outline       轮廓，大纲</p></li><li><p>Distinct      明显的，独特的</p></li><li><p>stable 稳定的</p></li><li><p>Implement 实现，执行</p></li><li><p>Hexadecimal 十六进值</p></li><li><p>Compress      压缩</p></li><li><p>Recurse      递归</p></li><li><p>Dispatch      发送，派遣</p></li><li><p>Literal          文字的</p></li><li><p>Frame         框架，结构</p></li><li><p>Loop        环形，圈</p></li><li><p>Register      登记，注册</p></li><li><p>Sprite       妖精,精灵,鬼怪,调皮鬼</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>2020</p><p>:4</p><ul><li><p>Framework     架构</p></li><li><p>Architecture  架构</p></li><li><p>Opacity       不透明性，模糊</p></li><li><p>Alignment     对齐</p></li><li><p>Animate       动画，动态</p></li><li><p>Parallel      平行的，同时的</p></li><li><p>Duration      持续时间</p></li><li><p>Configuration 配置，布局，构造，结构</p></li><li><p>Syntax        语法，句法</p></li><li><p>Implicit      隐式的，不直接言明的</p></li><li><p>Delegate      委托，代表，授权</p></li><li><p>Priority      优先级，优先地</p></li><li><p>Constraint    约束，限制</p></li><li><p>Scale         规模，比例       </p></li><li><p>Appearance    外观，外貌</p></li><li><p>Drag          拖动</p></li><li><p>Clip          剪切</p></li><li><p>Paste         粘贴</p></li><li><p>Interaction   交互，交流，互动</p></li><li><p>Thread        线，线程</p></li><li><p>Multiplex     复用，多重</p></li><li><p>Map           映现，映射</p></li><li><p>DeadLock      死锁</p></li><li><p>Diagram       图，图表，示意图</p></li><li><p>View          视图</p></li><li><p>Inner         内部，内部的</p></li><li><p>Maintenance   维护</p></li><li><p>Oriented      使面向，使朝向</p></li><li><p>Advanced      高级（设置，选项）</p></li><li><p>Collaboration 合作，协作</p></li></ul><p>:5</p><ul><li><p>Collapse      重叠，折叠</p></li><li><p>Interval      间隔，时距</p></li><li><p>Radio         单选框</p></li><li><p>Checkbox      复选框</p></li><li><p>Prototype     原型，雏型</p></li><li><p>Thrashing     颠簸，抖动</p></li><li><p>Engine        引擎，发动机</p></li><li><p>Horizontal    水平的</p></li><li><p>Vertical      垂直的</p></li><li><p>Lateral       侧面的，横向的</p></li><li><p>Muscle        肌肉，威信</p></li></ul><p>:6</p><ul><li><p>Semaphore     信号量，信号标</p></li><li><p>Oolong        乌龙茶  </p></li><li><p>Filter        过滤，过滤器</p></li><li><p>Integrate     集成，合并</p></li><li><p>Separator     分隔符</p></li><li><p>Fragment      碎片，片段</p></li><li><p>Comment       评论，描述，批评</p></li><li><p>Register      登记，注册</p></li><li><p>Variant       变形，变体</p></li><li><p>Macro         宏指令</p></li><li><p>Meta-Object   元对象</p></li><li><p>Loop          回路，循环</p></li><li><p>Analogous     类似的</p></li><li><p>Outline       轮廓，大纲</p></li><li><p>Distinct      明显的，独特的</p></li><li><p>stable 稳定的</p></li><li><p>Implement 实现，执行</p></li><li><p>Hexadecimal 十六进值</p></li><li><p>Compress      压缩</p></li><li><p>Recurse      递归</p></li><li><p>Dispatch      发送，派遣</p></li><li><p>Literal          文字的</p></li><li><p>Frame         框架，结构</p></li><li><p>Loop        环形，圈</p></li><li><p>Register      登记，注册</p></li><li><p>Sprite       妖精,精灵,鬼怪,调皮鬼</p></li><li><p>Contradiction     矛盾，对立</p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/007S8ZIlly1gg1e5kw10gj30hs0c4q73.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;2020&lt;/p&gt;
+        &lt;p&gt;2020&lt;/p&gt;
 &lt;p&gt;:4&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Framework    
+&lt;li&gt;&lt;p&gt;Framework     架构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Architecture  架构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Opacity       不透明性，模糊&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p
       
     
     </summary>
