@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.martinhyj.xyz/"/>
-  <updated>2020-06-28T09:25:06.225Z</updated>
+  <updated>2020-07-02T14:54:39.582Z</updated>
   <id>https://www.martinhyj.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PageTable</title>
+    <link href="https://www.martinhyj.xyz/2020/07/02/PageTable/"/>
+    <id>https://www.martinhyj.xyz/2020/07/02/PageTable/</id>
+    <published>2020-07-02T14:05:20.000Z</published>
+    <updated>2020-07-02T14:54:39.582Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="虚拟内存-gt-分页-gt-页表"><a href="#虚拟内存-gt-分页-gt-页表" class="headerlink" title="虚拟内存-&gt;分页-&gt;页表"></a>虚拟内存-&gt;分页-&gt;页表</h4><ul><li>在大多数系统中，每个进程都有一个页表，保存在内存中。</li><li>页表项，页表中储存页信息的项（存在位，修改位，访问权限位，页框号）</li><li>页表也是页，服从分页管理</li><li>逻辑地址（页号+偏移量）-&gt;页表(页框号)-&gt;物理地址（页框号+偏移量）</li><li>2^10=1024</li><li>多级页表</li><li>抖动 Thrashing</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;虚拟内存-gt-分页-gt-页表&quot;&gt;&lt;a href=&quot;#虚拟内存-gt-分页-gt-页表&quot; class=&quot;headerlink&quot; title=&quot;虚拟内存-&amp;gt;分页-&amp;gt;页表&quot;&gt;&lt;/a&gt;虚拟内存-&amp;gt;分页-&amp;gt;页表&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在大多数
+      
+    
+    </summary>
+    
+    
+      <category term="OS" scheme="https://www.martinhyj.xyz/categories/OS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Marxism1</title>
