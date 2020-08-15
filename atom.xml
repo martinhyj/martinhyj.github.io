@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.martinhyj.xyz/"/>
-  <updated>2020-08-15T07:39:41.409Z</updated>
+  <updated>2020-08-15T07:50:46.506Z</updated>
   <id>https://www.martinhyj.xyz/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="https://www.martinhyj.xyz/2020/08/13/Python/"/>
     <id>https://www.martinhyj.xyz/2020/08/13/Python/</id>
     <published>2020-08-13T11:51:44.000Z</published>
-    <updated>2020-08-15T07:39:41.409Z</updated>
+    <updated>2020-08-15T07:50:46.506Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="python-笔记"><a href="#python-笔记" class="headerlink" title="python 笔记"></a>python 笔记</h3><hr><p><strong>1. Python IDE</strong></p><ul><li><p>visual studio code(VsCode) </p></li><li><p>PyCharm</p></li><li><p>IDLE(Shell)   </p></li></ul><p><strong>2. Python 爬虫相关积累</strong></p><ul><li>urllib(python3,urllib进行了统一)</li></ul><p>​        Request(请求)：构造代理</p><p>​        Parse(解析)：</p><ul><li>BeautifulSoup   </li></ul><p>​        BeautifulSoup(解析网页)，操控标签: </p><p>​        …          </p><ul><li>re</li></ul><p>​       Compile(构造正则表达式对象): 贪婪和非贪婪模式</p><p>​       Sun、replace…</p><p>​       …</p><ul><li><p>file(文件操作)</p><p>Open, read,write, close</p></li><li><p>Selenium</p><p>webdriver(模拟浏览器)：可抓取动态页面<br>在连续加载web页面时，应设置加载等待（显示等待WebDriverWait,，隐式等待implicitly_wait，强制等待(sleep)），否则在进行页面内容获取操作时，会得不到相关内容</p></li></ul><p>  …</p><ul><li><p>xlwt</p><p>Workbook(构造xls对象)：创建workbook、添加sheet、添加信息</p><p>…</p></li><li><p>多行语句的写法</p><pre><code>1：:每行以\结尾，\为续行符2：（），[], {}中无需使用\3：多行字符串（使用3引号或3双引号）：&quot;&quot;&quot; &quot;&quot;&quot;, &apos;&apos;&apos; &apos;&apos;&apos;,也可作为多行注释</code></pre></li></ul><p>   *<em>3. 数据库 *</em></p><ul><li><p>mysql</p><ol><li>python3可使用：pymysql</li><li>sql语句的参数传递时，参数在字符串以外，理念同于C(printf(“%s %d % f”,string, int, float))</li><li>Mysql语句中的占位符均为%s</li><li>Mysql的端口号为3306</li></ol><p>…</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><hr><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ghrjlpy1tdj30i30bp0th.jpg" alt=""><br><strong>1. Python IDE</strong></p><ul><li><p>visual studio code(VsCode) </p></li><li><p>PyCharm</p></li><li><p>IDLE(Shell)   </p></li></ul><p><strong>2. Python 爬虫相关积累</strong></p><ul><li><p>urllib(python3,urllib进行了统一)</p><ul><li><p>Request(请求)：构造代理</p></li><li><p>Parse(解析)：</p></li></ul></li><li><p>BeautifulSoup   </p><ul><li>BeautifulSoup(解析网页)，操控标签: </li></ul></li></ul><p>​        …          </p><ul><li>re<ul><li>Compile(构造正则表达式对象): 贪婪和非贪婪模式</li><li>Sun、replace…</li></ul></li></ul><p>​       …</p><ul><li><p>file(文件操作)</p><ul><li>Open, read,write, close</li></ul></li><li><p>Selenium</p><ul><li>webdriver(模拟浏览器)：可抓取动态页面</li><li>在连续加载web页面时，应设置加载等待（显示等待WebDriverWait,，隐式等待implicitly_wait，强制等待(sleep)），否则在进行页面内容获取操作时，会得不到相关内容</li></ul></li></ul><p>  …</p><ul><li><p>xlwt</p><ul><li>Workbook(构造xls对象)：创建workbook、添加sheet、添加信息</li></ul><p>…</p></li><li><p>多行语句的写法</p><pre><code>1：:每行以\结尾，\为续行符2：（），[], {}中无需使用\3：多行字符串（使用3引号或3双引号）：&quot;&quot;&quot; &quot;&quot;&quot;, &apos;&apos;&apos; &apos;&apos;&apos;,也可作为多行注释</code></pre></li></ul><p>   *<em>3. 数据库 *</em></p><ul><li><p>mysql</p><ol><li>python3可使用：pymysql</li><li>sql语句的参数传递时，参数在字符串以外，理念同于C(printf(“%s %d % f”,string, int, float))</li><li>Mysql语句中的占位符均为%s</li><li>Mysql的端口号为3306</li></ol><p>…</p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;python-笔记&quot;&gt;&lt;a href=&quot;#python-笔记&quot; class=&quot;headerlink&quot; title=&quot;python 笔记&quot;&gt;&lt;/a&gt;python 笔记&lt;/h3&gt;&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;1. Python IDE&lt;/strong&gt;&lt;/p&gt;
-&lt;u
+        &lt;h3 id=&quot;python&quot;&gt;&lt;a href=&quot;#python&quot; class=&quot;headerlink&quot; title=&quot;python&quot;&gt;&lt;/a&gt;python&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/007S8ZIlg
       
     
     </summary>
