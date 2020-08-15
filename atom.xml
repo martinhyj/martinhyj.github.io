@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.martinhyj.xyz/"/>
-  <updated>2020-07-17T15:14:22.495Z</updated>
+  <updated>2020-08-15T07:39:41.409Z</updated>
   <id>https://www.martinhyj.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python</title>
+    <link href="https://www.martinhyj.xyz/2020/08/13/Python/"/>
+    <id>https://www.martinhyj.xyz/2020/08/13/Python/</id>
+    <published>2020-08-13T11:51:44.000Z</published>
+    <updated>2020-08-15T07:39:41.409Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="python-笔记"><a href="#python-笔记" class="headerlink" title="python 笔记"></a>python 笔记</h3><hr><p><strong>1. Python IDE</strong></p><ul><li><p>visual studio code(VsCode) </p></li><li><p>PyCharm</p></li><li><p>IDLE(Shell)   </p></li></ul><p><strong>2. Python 爬虫相关积累</strong></p><ul><li>urllib(python3,urllib进行了统一)</li></ul><p>​        Request(请求)：构造代理</p><p>​        Parse(解析)：</p><ul><li>BeautifulSoup   </li></ul><p>​        BeautifulSoup(解析网页)，操控标签: </p><p>​        …          </p><ul><li>re</li></ul><p>​       Compile(构造正则表达式对象): 贪婪和非贪婪模式</p><p>​       Sun、replace…</p><p>​       …</p><ul><li><p>file(文件操作)</p><p>Open, read,write, close</p></li><li><p>Selenium</p><p>webdriver(模拟浏览器)：可抓取动态页面<br>在连续加载web页面时，应设置加载等待（显示等待WebDriverWait,，隐式等待implicitly_wait，强制等待(sleep)），否则在进行页面内容获取操作时，会得不到相关内容</p></li></ul><p>  …</p><ul><li><p>xlwt</p><p>Workbook(构造xls对象)：创建workbook、添加sheet、添加信息</p><p>…</p></li><li><p>多行语句的写法</p><pre><code>1：:每行以\结尾，\为续行符2：（），[], {}中无需使用\3：多行字符串（使用3引号或3双引号）：&quot;&quot;&quot; &quot;&quot;&quot;, &apos;&apos;&apos; &apos;&apos;&apos;,也可作为多行注释</code></pre></li></ul><p>   *<em>3. 数据库 *</em></p><ul><li><p>mysql</p><ol><li>python3可使用：pymysql</li><li>sql语句的参数传递时，参数在字符串以外，理念同于C(printf(“%s %d % f”,string, int, float))</li><li>Mysql语句中的占位符均为%s</li><li>Mysql的端口号为3306</li></ol><p>…</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;python-笔记&quot;&gt;&lt;a href=&quot;#python-笔记&quot; class=&quot;headerlink&quot; title=&quot;python 笔记&quot;&gt;&lt;/a&gt;python 笔记&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;1. Python IDE&lt;/strong&gt;&lt;/p&gt;
+&lt;u
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="https://www.martinhyj.xyz/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>TCPIP</title>
@@ -139,7 +165,7 @@
     <published>2020-04-11T09:29:26.387Z</published>
     <updated>2020-04-19T09:29:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p>2020</p><p>:4</p><ul><li><p>Framework     架构</p></li><li><p>Architecture  架构</p></li><li><p>Opacity       不透明性，模糊</p></li><li><p>Alignment     对齐</p></li><li><p>Animate       动画，动态</p></li><li><p>Parallel      平行的，同时的</p></li><li><p>Duration      持续时间</p></li><li><p>Configuration 配置，布局，构造，结构</p></li><li><p>Syntax        语法，句法</p></li><li><p>Implicit      隐式的，不直接言明的</p></li><li><p>Delegate      委托，代表，授权</p></li><li><p>Priority      优先级，优先地</p></li><li><p>Constraint    约束，限制</p></li><li><p>Scale         规模，比例       </p></li><li><p>Appearance    外观，外貌</p></li><li><p>Drag          拖动</p></li><li><p>Clip          剪切</p></li><li><p>Paste         粘贴</p></li><li><p>Interaction   交互，交流，互动</p></li><li><p>Thread        线，线程</p></li><li><p>Multiplex     复用，多重</p></li><li><p>Map           映现，映射</p></li><li><p>DeadLock      死锁</p></li><li><p>Diagram       图，图表，示意图</p></li><li><p>View          视图</p></li><li><p>Inner         内部，内部的</p></li><li><p>Maintenance   维护</p></li><li><p>Oriented      使面向，使朝向</p></li><li><p>Advanced      高级（设置，选项）</p></li><li><p>Collaboration 合作，协作</p></li></ul><p>:5</p><ul><li><p>Collapse      重叠，折叠</p></li><li><p>Interval      间隔，时距</p></li><li><p>Radio         单选框</p></li><li><p>Checkbox      复选框</p></li><li><p>Prototype     原型，雏型</p></li><li><p>Thrashing     颠簸，抖动</p></li><li><p>Engine        引擎，发动机</p></li><li><p>Horizontal    水平的</p></li><li><p>Vertical      垂直的</p></li><li><p>Lateral       侧面的，横向的</p></li><li><p>Muscle        肌肉，威信</p></li></ul><p>:6</p><ul><li><p>Semaphore     信号量，信号标</p></li><li><p>Oolong        乌龙茶  </p></li><li><p>Filter        过滤，过滤器</p></li><li><p>Integrate     集成，合并</p></li><li><p>Separator     分隔符</p></li><li><p>Fragment      碎片，片段</p></li><li><p>Comment       评论，描述，批评</p></li><li><p>Register      登记，注册</p></li><li><p>Variant       变形，变体</p></li><li><p>Macro         宏指令</p></li><li><p>Meta-Object   元对象</p></li><li><p>Loop          回路，循环</p></li><li><p>Analogous     类似的</p></li><li><p>Outline       轮廓，大纲</p></li><li><p>Distinct      明显的，独特的</p></li><li><p>stable 稳定的</p></li><li><p>Implement 实现，执行</p></li><li><p>Hexadecimal 十六进值</p></li><li><p>Compress      压缩</p></li><li><p>Recurse      递归</p></li><li><p>Dispatch      发送，派遣</p></li><li><p>Literal          文字的</p></li><li><p>Frame         框架，结构</p></li><li><p>Loop        环形，圈</p></li><li><p>Register      登记，注册</p></li><li><p>Sprite       妖精,精灵,鬼怪,调皮鬼</p></li><li><p>Contradiction     矛盾，对立</p></li></ul><p>:8</p><ul><li><p>Parse      解析，从语法上分析   </p></li><li><p>Cursor     游标，指针   </p></li><li><p>Commit     提交   </p></li><li><p>Compile   编译   </p></li><li><p>Sheet    表单   </p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>2020</p><p>:4</p><ul><li><p>Framework     架构</p></li><li><p>Architecture  架构</p></li><li><p>Opacity       不透明性，模糊</p></li><li><p>Alignment     对齐</p></li><li><p>Animate       动画，动态</p></li><li><p>Parallel      平行的，同时的</p></li><li><p>Duration      持续时间</p></li><li><p>Configuration 配置，布局，构造，结构</p></li><li><p>Syntax        语法，句法</p></li><li><p>Implicit      隐式的，不直接言明的</p></li><li><p>Delegate      委托，代表，授权</p></li><li><p>Priority      优先级，优先地</p></li><li><p>Constraint    约束，限制</p></li><li><p>Scale         规模，比例       </p></li><li><p>Appearance    外观，外貌</p></li><li><p>Drag          拖动</p></li><li><p>Clip          剪切</p></li><li><p>Paste         粘贴</p></li><li><p>Interaction   交互，交流，互动</p></li><li><p>Thread        线，线程</p></li><li><p>Multiplex     复用，多重</p></li><li><p>Map           映现，映射</p></li><li><p>DeadLock      死锁</p></li><li><p>Diagram       图，图表，示意图</p></li><li><p>View          视图</p></li><li><p>Inner         内部，内部的</p></li><li><p>Maintenance   维护</p></li><li><p>Oriented      使面向，使朝向</p></li><li><p>Advanced      高级（设置，选项）</p></li><li><p>Collaboration 合作，协作</p></li></ul><p>:5</p><ul><li><p>Collapse      重叠，折叠</p></li><li><p>Interval      间隔，时距</p></li><li><p>Radio         单选框</p></li><li><p>Checkbox      复选框</p></li><li><p>Prototype     原型，雏型</p></li><li><p>Thrashing     颠簸，抖动</p></li><li><p>Engine        引擎，发动机</p></li><li><p>Horizontal    水平的</p></li><li><p>Vertical      垂直的</p></li><li><p>Lateral       侧面的，横向的</p></li><li><p>Muscle        肌肉，威信</p></li></ul><p>:6</p><ul><li><p>Semaphore     信号量，信号标</p></li><li><p>Oolong        乌龙茶  </p></li><li><p>Filter        过滤，过滤器</p></li><li><p>Integrate     集成，合并</p></li><li><p>Separator     分隔符</p></li><li><p>Fragment      碎片，片段</p></li><li><p>Comment       评论，描述，批评</p></li><li><p>Register      登记，注册</p></li><li><p>Variant       变形，变体</p></li><li><p>Macro         宏指令</p></li><li><p>Meta-Object   元对象</p></li><li><p>Loop          回路，循环</p></li><li><p>Analogous     类似的</p></li><li><p>Outline       轮廓，大纲</p></li><li><p>Distinct      明显的，独特的</p></li><li><p>stable 稳定的</p></li><li><p>Implement 实现，执行</p></li><li><p>Hexadecimal 十六进值</p></li><li><p>Compress      压缩</p></li><li><p>Recurse      递归</p></li><li><p>Dispatch      发送，派遣</p></li><li><p>Literal          文字的</p></li><li><p>Frame         框架，结构</p></li><li><p>Loop        环形，圈</p></li><li><p>Register      登记，注册</p></li><li><p>Sprite       妖精,精灵,鬼怪,调皮鬼</p></li><li><p>Contradiction     矛盾，对立</p></li></ul><p>:8</p><ul><li>Parse      解析，从语法上分析   </li><li>Cursor     游标，指针   </li><li>Commit     提交   </li><li>Compile   编译   </li><li>Sheet    表单   </li><li>Module   模块</li><li></li></ul>]]></content>
     
     <summary type="html">
     
