@@ -1,249 +1,373 @@
 <!DOCTYPE html>
-<html lang='zh-ch'>
+<html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<meta name="renderer" content="webkit">
-<meta http-equiv="Cache-Control" content="no-siteapp"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>tuotuoliny|Life</title>
-<meta name="description" content="a man with dream">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tuotuoliny">
-<meta property="og:url" content="https://www.martinhyj.xyz/archives/index.html">
-<meta property="og:site_name" content="tuotuoliny">
-<meta property="og:description" content="a man with dream">
-<meta property="og:locale" content="zh_CH">
-<meta property="article:author" content="martin">
-<meta property="article:tag" content="life study">
-<meta name="twitter:card" content="summary">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="life study" />
+    <title>
+        tuotuoliny
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
 
 
-<meta name="description" content="a man with dream">
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
 
-<meta name="author" content="martin,130601821@qq.com">
+    <script>
+        infiniteScroll()
 
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
 
-<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
-<link rel="icon" href="/favicon.png">
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
 
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
 
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
 
-
-<link rel="stylesheet" href="/css/theme.css">
-
-
-<link rel="stylesheet" href="/css/syntax.css">
-
-
-<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
-
-
-<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.1.0/styles/arta.min.css">
-
-<!--baidu analytics-->
-
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="tuotuoliny" type="application/atom+xml">
 </head>
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-            <a class="navbar-brand" href="/.">tuotuoliny</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                
-                <li><a href="/."><i class="icon-home"> Inicio</i></a></li>
-                
-                <li><a href="/archives/" class="current"><i class="icon-archive"> Archivo</i></a></li>
-                
-                <li><a href="/atom.xml"><i class="icon-rss"> RSS</i></a></li>
-                
-                <li><a href="/about/"><i class="icon-about"> Acerca de</i></a></li>
-                
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="wrapper">
-    <div class="content">
-        <div class="container container-center">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="well">
-    <div class="page-content wc-container">
-        <h1>Archivo</h1>
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                tuotuoliny
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
 
-        <div class="post">
-            
-            <div class="post-meta">
-                <div class="post-time">
-                    <time>2020</time>
-                </div>
-            </div>
-            <ul class="posts">
-                
-                <li>08-13 <a
-                            href="/2020/08/13/Python/">Python</a></li>
-                
-                <li>07-02 <a
-                            href="/2020/07/02/PageTable/">PageTable</a></li>
-                
-                <li>06-28 <a
-                            href="/2020/06/28/Marxism/">Marxism1</a></li>
-                
-                <li>05-07 <a
-                            href="/2020/05/07/My%20Sassy%20Girl/">Sassy Girl</a></li>
-                
-                <li>05-03 <a
-                            href="/2020/05/03/three/">three</a></li>
-                
-                <li>04-11 <a
-                            href="/2020/04/11/two/">Two</a></li>
-                
-                <li>04-10 <a
-                            href="/2020/04/10/one/">One</a></li>
-                
-            </ul>
-            
-        </div>
-    </div>
-</div>
-                </div>
-                <div class="col-md-4 hidden-xs">
-                    
-<div class="sidebar">
-    <div class="well">
-        <h2>Nube de etiquetas</h2>
-        <a href="/tags/life/" style="font-size: 15px;">life</a> <a href="/tags/movie/" style="font-size: 15px;">movie</a>
-    </div>
-</div>
+    <button class="ipad-menu menu">menu</button>
 
-<div class="sidebar">
-    <div class="well">
-        <h2>Archivo</h2>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">2020年08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">2020年07月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">2020年06月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">2020年05月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">2020年04月</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-</div>
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            tuotuoliny
+        </a>
+    </h1>
+    <h2 class="desc">
+        Life
+    </h2>
 
-<div class="sidebar ">
-    <div class="well">
-        <h2>Recientes</h2>
-        <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/08/13/Python/">Python</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/02/PageTable/">PageTable</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/06/28/Marxism/">Marxism1</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/07/My%20Sassy%20Girl/">Sassy Girl</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/03/three/">three</a></li></ul>
-    </div>
-</div>
-
-<div class="sidebar">
-    <div class="well">
-        <h2>Blogroll</h2>
+    <div class="links">
         <ul>
             
-            <li><a class="links-list-link" href="http://www.martinhyj.xyz/" title="tuotuoliny" target='_blank'>tuotuoliny</a></li>
+            <li>
+                <a href="https://github.com/martinhyj" target="_blank" rel="noopener">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.cnblogs.com/hongbo-tao/" target="_blank" rel="noopener">
+                    CnBlogs
+                </a>
+            </li>
             
         </ul>
     </div>
-</div>
+</header>
+        <main class="main">
+            
+<section class="posts">
+    
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2020/08/13/Python/">
+                            Python
+                        </a>
+                    </h1>
 
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="side-button-wrap">
-        <a id="to-top" class="side-button icon-up-arrow" href="#top"></a>
-        <a id="to-home" class="side-button icon-home" href="/."></a>
-        <a id="to-comment-button" class="side-button icon-msg" href="#comment"></a>
-        <a id="to-bottom-button" class="side-button icon-down-arrow" href="#bottom"></a>
-    </div>
-    <a id="bottom" name="bottom"></a>
-    <footer id="footer" class="footer-distributed" style="background-color: #222222;">
-    <div class="container">
-        <div class="footer">
-            <p>martin &copy; 2020</p>
-            <ul class="social-media">
-                
-                <li>
-                    <a title="github" href="https://github.com/https://github.com"
-                       target="_blank">
-                        <i class="fa fa-github fa-2x"></i>
+                    <ul class="post-date">
+                        <li>
+                            August 13, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ghrjlpy1tdj30i30bp0th.jpg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/08/13/Python/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                <h4 class="post-cat">
+                    <a href="/categories/OS/">
+                        OS
                     </a>
-                </li>
+                </h4>
                 
-                
-                <li>
-                    <a title="E-mail" href="mailto:130601821@qq.com">
-                        <i class="fa fa-envelope fa-2x"></i>
+                    <h1 class="post-title">
+                        <a href="/2020/07/02/PageTable/">
+                            PageTable
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            July 2, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/07/02/PageTable/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                <h4 class="post-cat">
+                    <a href="/categories/Philosophy/">
+                        Philosophy
                     </a>
-                </li>
+                </h4>
                 
-                <li>
-                    <a title="hexo-theme-clean-dark" href="https://github.com/howardliu-cn/hexo-theme-clean-dark"
-                       target="_blank">
-                        <i class="fa fa-film fa-2x"></i>
+                    <h1 class="post-title">
+                        <a href="/2020/06/28/Marxism/">
+                            Marxism1
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            June 28, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gg7uhqjb4lj30hs0cctaz.jpg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/06/28/Marxism/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2020/05/07/My%20Sassy%20Girl/">
+                            Sassy Girl
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            May 7, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="http://img1.cache.netease.com/cnews/2016/3/3/20160303151045148b3_550.jpg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/05/07/My%20Sassy%20Girl/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                <h4 class="post-cat">
+                    <a href="/categories/devotion/">
+                        devotion
                     </a>
-                </li>
+                </h4>
                 
-            </ul>
-        </div>
+                    <h1 class="post-title">
+                        <a href="/2020/05/03/three/">
+                            three
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            May 3, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhwhjotirj30hs080aah.jpg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/05/03/three/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                <h4 class="post-cat">
+                    <a href="/categories/term/">
+                        term
+                    </a>
+                </h4>
+                
+                    <h1 class="post-title">
+                        <a href="/2020/04/11/two/">
+                            Two
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            April 11, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/04/11/two/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                <h4 class="post-cat">
+                    <a href="/categories/record/">
+                        record
+                    </a>
+                </h4>
+                
+                <h4 class="post-cat">
+                    <a href="/categories/record/memory/">
+                        memory
+                    </a>
+                </h4>
+                
+                    <h1 class="post-title">
+                        <a href="/2020/04/10/one/">
+                            One
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            April 10, 2020
+                        </li>
+                        <li>
+                            martin
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhwru1dxcj30du091jrv.jpg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2020/04/10/one/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+</section>
+
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/OS/">OS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Philosophy/">Philosophy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/devotion/">devotion</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/record/">record</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/record/memory/">memory</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/term/">term</a></li></ul>
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movie/" rel="tag">movie</a></li></ul>
+
+            </section>
+        </aside>
     </div>
-</footer>
-
-</div>
-
-<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-
-
-<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script src="/js/header.js"></script>
-
-
-<script src="/js/toc.js"></script>
-
-<!--[if lt IE 9]>
-
-<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-
-![endif]-->
-<!--fancybox-->
-
-<script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-<script>
-    $(document).ready(function () {
-        $("img").each(function (index, item) {
-            var p = $(item).parents()[0];
-            if($(p).is('a')) {
-                $(p).fancybox();
-                return;
-            }
-            $(p).append(function() {return "<a id='fancybox_id_"+index+"' href='" + $(item).attr("src") + "'></a>";});
-            item.remove();
-            var fancyboxItem = $("#fancybox_id_" + index);
-            fancyboxItem.append($(item));
-            fancyboxItem.fancybox();
-        });
-    });
-</script>
-
-<!--baidu auto-push-->
-
-<!--google analytics-->
-
-<script color="255,255,255" opacity='0.9' zIndex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 </body>
+
 </html>
