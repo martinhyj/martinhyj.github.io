@@ -39,6 +39,49 @@
   </entry>
   
   <entry>
+    <title>NetWorkPrograming</title>
+    <link href="https://www.martinhyj.xyz/2020/07/17/TCPIP/"/>
+    <id>https://www.martinhyj.xyz/2020/07/17/TCPIP/</id>
+    <published>2020-07-17T15:14:22.000Z</published>
+    <updated>2020-09-23T11:20:40.364Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="NetWork" scheme="https://www.martinhyj.xyz/tags/NetWork/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>float</title>
+    <link href="https://www.martinhyj.xyz/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
+    <id>https://www.martinhyj.xyz/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/</id>
+    <published>2020-07-17T15:14:22.000Z</published>
+    <updated>2020-09-23T11:21:37.080Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="——浅谈浮点数"><a href="#——浅谈浮点数" class="headerlink" title="——浅谈浮点数"></a>——浅谈浮点数</h4><blockquote><p><strong>计算机中的整数,小数</strong></p></blockquote><ul><li><p>整数，通俗的讲就是在各进制下；数的组成全由（1，2，3…..）等整数组成；不存在小数（分数）部分或小数部分为0，在计算机中所有的整数由0,1组成，表示成二进制数并储存在存储设备中；</p></li><li><p>小数是一种特殊的实数，在数值计算中有至关重要的作用；小数也可以表示成二进制，如：0.125就等于0.001；小数点将小数分成整数与小数两部分，可是在计算机中，机器只认识0，1；那么我们怎么在计算机中存储小数点呢？</p></li></ul><hr><blockquote><p><strong>浮点数</strong></p></blockquote><ul><li><p>浮点数的引入解决了小数在机器中存储的问题，但其作用却不止于此；</p><p>​                                    <em>浮点数不是就代表小数！！！</em></p></li><li><p>官方解释：浮点数，是属于<a href="https://baike.baidu.com/item/有理数/105546" target="_blank" rel="noopener">有理数</a>中某特定<a href="https://baike.baidu.com/item/子集/5017034" target="_blank" rel="noopener">子集</a>的数的数字表示，在计算机中用以近似表示任意某个<a href="https://baike.baidu.com/item/实数/296419" target="_blank" rel="noopener">实数</a>。具体的说，这个实数由一个<a href="https://baike.baidu.com/item/整数/1293937" target="_blank" rel="noopener">整数</a>或<a href="https://baike.baidu.com/item/定点数/11030127" target="_blank" rel="noopener">定点数</a>（即<a href="https://baike.baidu.com/item/尾数/6244963" target="_blank" rel="noopener">尾数</a>）乘以某个基数（计算机中通常是2）的整数次幂得到，这种表示方法类似于基数为10的<a href="https://baike.baidu.com/item/科学计数法/756685" target="_blank" rel="noopener">科学计数法</a>。</p><ul><li>引入角度1: 浮点数既然可以在计算机中近似表示某个实数，那么就可以解决小数的问题</li><li>角度2: 在一些16，32位的机器中，可是利用浮点数表示法近似表示更大或更小的数（实数范围上），如：6.023*10^23(摩尔常数)</li></ul></li><li><p>定点数与浮点数</p><ul><li><p>定点数的含义是，在计算机中，我们表示一个实数的整数部分与小数部分的精度是固定的；比如在16位的系统中，可能用8位表示整数部分，8位表示小数部分（也可以其他分法）；但这个方法有明显的局限性；比如，以上定点数只能表示（0，2^8-1）,(-2^8, 2^7-1)范围内的数。</p></li><li><p>浮点数的定义相对于定点数，我们不固定小数点的位置，以实现更大的精度</p></li></ul></li></ul><hr><blockquote><p><strong>浮点数在计算机中的表示</strong></p></blockquote><ul><li><p>IEEE标准</p><ul><li><p>浮点数的一般二进制表示法：整数部分第n位就表示2^n，n从第0位开始计;小数部分第m位表示2^-m，m从1开始计：0.125就等于0.001；</p></li><li><p>将实数转化为IEEE754标准规格化的浮点数</p><ol><li><p>确定符号位（0，1）</p></li><li><p>将该数写成一般的二进制小数形式</p></li><li><p>用二进制科学计数法表示该数，将小数点放在从左往右数第一个1后边。</p><p>n= m * 2^e</p></li><li><p>尾数即为小数点后那串二进制数；阶码即上述得到的指数加上偏差值所得的和（32位中位127，64位中为1024）</p></li></ol></li></ul></li></ul><ul><li><p>IEEE754规格化浮点数</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj0s2sk5acj30fy019a9v.jpg" alt=""></p></li><li><p>32位浮点数(float 单精度)</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj0rxll3htj30e9033wed.jpg" style="zoom:80%;" /></li><li><p>64位浮点数（double 双精度）</p></li></ul><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj0rwy9ykhj30e9036a9y.jpg" style="zoom:80%;"/><ul><li>long double(拓展双精度浮点) </li></ul><hr><blockquote><p><strong>浮点数详细讲解</strong></p></blockquote><p>* </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;——浅谈浮点数&quot;&gt;&lt;a href=&quot;#——浅谈浮点数&quot; class=&quot;headerlink&quot; title=&quot;——浅谈浮点数&quot;&gt;&lt;/a&gt;——浅谈浮点数&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;计算机中的整数,小数&lt;/strong&gt;&lt;/p&gt;
+&lt;/blo
+      
+    
+    </summary>
+    
+    
+    
+      <category term="datatype" scheme="https://www.martinhyj.xyz/tags/datatype/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PageTable</title>
     <link href="https://www.martinhyj.xyz/2020/07/02/PageTable/"/>
     <id>https://www.martinhyj.xyz/2020/07/02/PageTable/</id>
