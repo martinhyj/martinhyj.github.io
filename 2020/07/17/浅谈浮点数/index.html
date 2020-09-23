@@ -155,12 +155,12 @@
 <li><p>官方解释：浮点数，是属于<a href="https://baike.baidu.com/item/有理数/105546" target="_blank" rel="noopener">有理数</a>中某特定<a href="https://baike.baidu.com/item/子集/5017034" target="_blank" rel="noopener">子集</a>的数的数字表示，在计算机中用以近似表示任意某个<a href="https://baike.baidu.com/item/实数/296419" target="_blank" rel="noopener">实数</a>。具体的说，这个实数由一个<a href="https://baike.baidu.com/item/整数/1293937" target="_blank" rel="noopener">整数</a>或<a href="https://baike.baidu.com/item/定点数/11030127" target="_blank" rel="noopener">定点数</a>（即<a href="https://baike.baidu.com/item/尾数/6244963" target="_blank" rel="noopener">尾数</a>）乘以某个基数（计算机中通常是2）的整数次幂得到，这种表示方法类似于基数为10的<a href="https://baike.baidu.com/item/科学计数法/756685" target="_blank" rel="noopener">科学计数法</a>。</p>
 <ul>
 <li>引入角度1: 浮点数既然可以在计算机中近似表示某个实数，那么就可以解决小数的问题</li>
-<li>角度2: 在一些16，32位的机器中，可是利用浮点数表示法近似表示更大或更小的数（实数范围上），如：6.023*10^23(摩尔常数)</li>
+<li>角度2: 在一些16，32位的机器中，可是利用浮点数表示法近似表示更大或更小的数（实数范围上），如：6.023*10<sup>23</sup>(摩尔常数)</li>
 </ul>
 </li>
 <li><p>定点数与浮点数</p>
 <ul>
-<li><p>定点数的含义是，在计算机中，我们表示一个实数的整数部分与小数部分的精度是固定的；比如在16位的系统中，可能用8位表示整数部分，8位表示小数部分（也可以其他分法）；但这个方法有明显的局限性；比如，以上定点数只能表示（0，2^8-1）,(-2^8, 2^7-1)范围内的数。</p>
+<li><p>定点数的含义是，在计算机中，我们表示一个实数的整数部分与小数部分的精度是固定的；比如在16位的系统中，可能用8位表示整数部分，8位表示小数部分（也可以其他分法）；但这个方法有明显的局限性；比如，以上定点数只能表示（0，2<sup>8</sup>-1）,(-2<sup>8</sup>, 2<sup>7</sup>-1)范围内的数。</p>
 </li>
 <li><p>浮点数的定义相对于定点数，我们不固定小数点的位置，以实现更大的精度</p>
 </li>
@@ -174,7 +174,7 @@
 <ul>
 <li><p>IEEE标准</p>
 <ul>
-<li><p>浮点数的一般二进制表示法：整数部分第n位就表示2^n，n从第0位开始计;小数部分第m位表示2^-m，m从1开始计：0.125就等于0.001；</p>
+<li><p>浮点数的一般二进制表示法：整数部分第n位就表示2<sup>n</sup>，n从第0位开始计;小数部分第m位表示2<sup>-m</sup>，m从1开始计：0.125就等于0.001；</p>
 </li>
 <li><p>将实数转化为IEEE754标准规格化的浮点数</p>
 <ol>
@@ -183,9 +183,9 @@
 <li><p>将该数写成一般的二进制小数形式</p>
 </li>
 <li><p>用二进制科学计数法表示该数，将小数点放在从左往右数第一个1后边。</p>
-<p>n= m * 2^e</p>
+<p>n= m * 2<sup>e</sup></p>
 </li>
-<li><p>尾数即为小数点后那串二进制数；阶码即上述得到的指数加上偏差值所得的和（32位中位127，64位中为1024）</p>
+<li><p>尾数即为小数点后那串二进制数；阶码即上述得到的指数加上偏差值所得的和（32位中为127，64位中为1024）</p>
 </li>
 </ol>
 </li>
@@ -237,7 +237,7 @@
                 
     <h1>Tags</h1>
 
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NetWork/" rel="tag">NetWork</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datatype/" rel="tag">datatype</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movie/" rel="tag">movie</a></li></ul>
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NetWork-C/" rel="tag">NetWork, C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datatype-C/" rel="tag">datatype, C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movie/" rel="tag">movie</a></li></ul>
 
             </section>
         </aside>
