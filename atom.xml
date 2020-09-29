@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.martinhyj.xyz/"/>
-  <updated>2020-09-11T03:13:03.733Z</updated>
+  <updated>2020-09-29T11:47:09.901Z</updated>
   <id>https://www.martinhyj.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈字符</title>
+    <link href="https://www.martinhyj.xyz/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/"/>
+    <id>https://www.martinhyj.xyz/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/</id>
+    <published>2020-09-29T10:18:42.000Z</published>
+    <updated>2020-09-29T11:47:09.901Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><h4 id="首先了解下ASCII"><a href="#首先了解下ASCII" class="headerlink" title="首先了解下ASCII"></a>首先了解下ASCII</h4></blockquote><ul><li><p><a href="https://baike.baidu.com/item/ASCII/309296?fr=aladdin" target="_blank" rel="noopener">ASCII</a> (American Standard Code for Information Interchange): 美国信息交换标准代码</p></li><li><p>在计算机中，所有数据的存储都适用二进制数来表示，因为计算机用高低电平来表示1与0；例如，像a、b、c、d这样的52个字母（包括大写）以及0、1等数字还有一些常用的符号（例如*、#、@等）在计算机中存储时也要使用二进制数来表示，ASCII编码就是美国（ANSI）出台的供不同计算机在相互通信时共同遵守的西文字符编码标准，后来被ISO定为国际标准，适用于所有拉丁字母。</p></li><li><p>起初，ASCII由七位表示，共可以表示128个字符；后在进化为由8位表示，可以表示256个字符。</p></li><li><p>通俗的讲，该编码规则就是用简单的数字来特殊表示我们常用的一些字符（字母，符号，数字）,例如：可以这样讲，在ASCII编码下，数字0就表示NULL，整数48就表示字符0</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7rbfcz6uj30l8077t9p.jpg" style="zoom:80%;" /><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7rbgx8kzj30l80773zd.jpg" style="zoom:80%;" />                                                        [ASCII对照表](http://ascii.911cha.com)</li></ul><blockquote><h3 id="编程语言-C-中的字符"><a href="#编程语言-C-中的字符" class="headerlink" title="编程语言(C)中的字符"></a>编程语言(C)中的字符</h3></blockquote><ul><li><p>C语言中，也用ASCII字符集来表示基本字符，一个字符类型char用一字节（8位）表示。</p></li><li><p>字符字面量用单引号，里面包含一个或多个字符；如：’a’,’123’都是有效的字符字面量；</p></li><li><p>C11规定，一个字符字面量具有int类型（意为当我们可以把一个字符当作int类型来操作，如果我们想的话），如果讲一个字符字面量赋值给一个char类型，那么将该字符字面量的最低有效位赋值给它。可以理解为字符类型只能够识别8位的数据，所以当使用多字符字面量或者int类型赋值给字符变量和想用字符形式表示时，都采用上述方法。</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7qruchxcj30ho09440b.jpg" style="zoom:80%;" /><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7qrwlyw1j30as03caac.jpg" style="zoom:80%;" /></li><li><p>不是所有的字符字面量都能回显在显示台，如控制字符’\n’,’\t’之类的特殊字符。</p></li><li><p>用\后面紧跟1到3个八进制数，来用8进制编码表示一个字符，如：\7、\12、\123；用\x后面跟一个16进制数来用16进制编码表示一个字符,如：\x0a、\x30。</p></li><li><p>#在8位的范围内，char与int类型（无符号）可以看作兼容的#</p></li></ul><blockquote><h3 id="其他字符编码"><a href="#其他字符编码" class="headerlink" title="其他字符编码"></a>其他字符编码</h3></blockquote><ul><li>Unicode</li><li>GB2312(汉字编码)</li><li>GBK</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;h4 id=&quot;首先了解下ASCII&quot;&gt;&lt;a href=&quot;#首先了解下ASCII&quot; class=&quot;headerlink&quot; title=&quot;首先了解下ASCII&quot;&gt;&lt;/a&gt;首先了解下ASCII&lt;/h4&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a
+      
+    
+    </summary>
+    
+    
+    
+      <category term="C" scheme="https://www.martinhyj.xyz/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Python</title>
