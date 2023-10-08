@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-08T15:00:34.480Z</updated>
+  <updated>2023-10-08T16:06:26.054Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,16 @@
     <link href="http://example.com/2023/10/08/decorator/"/>
     <id>http://example.com/2023/10/08/decorator/</id>
     <published>2023-10-08T15:00:34.000Z</published>
-    <updated>2023-10-08T15:00:34.480Z</updated>
+    <updated>2023-10-08T16:06:26.054Z</updated>
     
+    <content type="html"><![CDATA[<p>hahahahhahah</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hahahahhahah&lt;/p&gt;
+</summary>
+      
     
     
     
@@ -34,8 +42,16 @@
     <link href="http://example.com/2023/10/08/singleton/"/>
     <id>http://example.com/2023/10/08/singleton/</id>
     <published>2023-10-08T10:16:12.000Z</published>
-    <updated>2023-10-08T10:16:12.952Z</updated>
+    <updated>2023-10-08T16:06:11.402Z</updated>
     
+    <content type="html"><![CDATA[<p>hshshshshshshhs</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hshshshshshshhs&lt;/p&gt;
+</summary>
+      
     
     
     
