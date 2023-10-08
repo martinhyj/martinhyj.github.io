@@ -3,11 +3,11 @@
   <title>tuotuoliny</title>
   
   <subtitle>Life</subtitle>
-  <link href="https://www.martinhyj.xyz/atom.xml" rel="self"/>
+  <link href="http://example.com/atom.xml" rel="self"/>
   
-  <link href="https://www.martinhyj.xyz/"/>
-  <updated>2023-10-08T10:16:12.952Z</updated>
-  <id>https://www.martinhyj.xyz/</id>
+  <link href="http://example.com/"/>
+  <updated>2023-10-08T15:00:34.480Z</updated>
+  <id>http://example.com/</id>
   
   <author>
     <name>martin</name>
@@ -17,9 +17,22 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>decorator</title>
+    <link href="http://example.com/2023/10/08/decorator/"/>
+    <id>http://example.com/2023/10/08/decorator/</id>
+    <published>2023-10-08T15:00:34.000Z</published>
+    <updated>2023-10-08T15:00:34.480Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>singleton</title>
-    <link href="https://www.martinhyj.xyz/2023/10/08/singleton/"/>
-    <id>https://www.martinhyj.xyz/2023/10/08/singleton/</id>
+    <link href="http://example.com/2023/10/08/singleton/"/>
+    <id>http://example.com/2023/10/08/singleton/</id>
     <published>2023-10-08T10:16:12.000Z</published>
     <updated>2023-10-08T10:16:12.952Z</updated>
     
@@ -31,8 +44,8 @@
   
   <entry>
     <title></title>
-    <link href="https://www.martinhyj.xyz/2021/04/16/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A31/"/>
-    <id>https://www.martinhyj.xyz/2021/04/16/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A31/</id>
+    <link href="http://example.com/2021/04/16/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A31/"/>
+    <id>http://example.com/2021/04/16/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A31/</id>
     <published>2021-04-16T09:29:52.946Z</published>
     <updated>2021-04-16T12:29:56.311Z</updated>
     
@@ -51,8 +64,8 @@
   
   <entry>
     <title>LinearAlgebra</title>
-    <link href="https://www.martinhyj.xyz/2021/04/06/LinearAlgebra/"/>
-    <id>https://www.martinhyj.xyz/2021/04/06/LinearAlgebra/</id>
+    <link href="http://example.com/2021/04/06/LinearAlgebra/"/>
+    <id>http://example.com/2021/04/06/LinearAlgebra/</id>
     <published>2021-04-06T12:14:15.000Z</published>
     <updated>2021-04-06T13:37:45.806Z</updated>
     
@@ -71,8 +84,8 @@
   
   <entry>
     <title>context(上下文)</title>
-    <link href="https://www.martinhyj.xyz/2020/10/02/context-%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
-    <id>https://www.martinhyj.xyz/2020/10/02/context-%E4%B8%8A%E4%B8%8B%E6%96%87/</id>
+    <link href="http://example.com/2020/10/02/context-%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
+    <id>http://example.com/2020/10/02/context-%E4%B8%8A%E4%B8%8B%E6%96%87/</id>
     <published>2020-10-02T05:38:13.000Z</published>
     <updated>2021-05-29T09:42:13.091Z</updated>
     
@@ -91,14 +104,14 @@
     
     
     
-    <category term="c" scheme="https://www.martinhyj.xyz/tags/c/"/>
+    <category term="c" scheme="http://example.com/tags/c/"/>
     
   </entry>
   
   <entry>
     <title>浅谈字符</title>
-    <link href="https://www.martinhyj.xyz/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/"/>
-    <id>https://www.martinhyj.xyz/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/</id>
+    <link href="http://example.com/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/"/>
+    <id>http://example.com/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/</id>
     <published>2020-09-29T10:18:42.000Z</published>
     <updated>2020-11-06T14:32:29.688Z</updated>
     
@@ -116,14 +129,14 @@
     
     
     
-    <category term="C" scheme="https://www.martinhyj.xyz/tags/C/"/>
+    <category term="C" scheme="http://example.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="https://www.martinhyj.xyz/2020/08/13/Python/"/>
-    <id>https://www.martinhyj.xyz/2020/08/13/Python/</id>
+    <link href="http://example.com/2020/08/13/Python/"/>
+    <id>http://example.com/2020/08/13/Python/</id>
     <published>2020-08-13T11:51:44.146Z</published>
     <updated>2020-10-06T09:14:55.812Z</updated>
     
@@ -142,8 +155,8 @@
   
   <entry>
     <title>Network</title>
-    <link href="https://www.martinhyj.xyz/2020/07/17/TCPIP/"/>
-    <id>https://www.martinhyj.xyz/2020/07/17/TCPIP/</id>
+    <link href="http://example.com/2020/07/17/TCPIP/"/>
+    <id>http://example.com/2020/07/17/TCPIP/</id>
     <published>2020-07-17T15:14:22.000Z</published>
     <updated>2020-09-23T11:32:35.806Z</updated>
     
@@ -151,14 +164,14 @@
     
     
     
-    <category term="NetWork, C" scheme="https://www.martinhyj.xyz/tags/NetWork-C/"/>
+    <category term="NetWork, C" scheme="http://example.com/tags/NetWork-C/"/>
     
   </entry>
   
   <entry>
     <title>浅谈浮点数</title>
-    <link href="https://www.martinhyj.xyz/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
-    <id>https://www.martinhyj.xyz/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/</id>
+    <link href="http://example.com/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
+    <id>http://example.com/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/</id>
     <published>2020-07-17T15:14:22.000Z</published>
     <updated>2021-08-04T08:39:47.361Z</updated>
     
@@ -175,14 +188,14 @@
     
     
     
-    <category term="C" scheme="https://www.martinhyj.xyz/tags/C/"/>
+    <category term="C" scheme="http://example.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>PageTable</title>
-    <link href="https://www.martinhyj.xyz/2020/07/02/PageTable/"/>
-    <id>https://www.martinhyj.xyz/2020/07/02/PageTable/</id>
+    <link href="http://example.com/2020/07/02/PageTable/"/>
+    <id>http://example.com/2020/07/02/PageTable/</id>
     <published>2020-07-02T14:05:20.000Z</published>
     <updated>2021-08-03T09:14:17.605Z</updated>
     
@@ -197,15 +210,15 @@
     
     
     
-    <category term="OS" scheme="https://www.martinhyj.xyz/categories/OS/"/>
+    <category term="OS" scheme="http://example.com/categories/OS/"/>
     
     
   </entry>
   
   <entry>
     <title>Marxism1</title>
-    <link href="https://www.martinhyj.xyz/2020/06/28/Marxism/"/>
-    <id>https://www.martinhyj.xyz/2020/06/28/Marxism/</id>
+    <link href="http://example.com/2020/06/28/Marxism/"/>
+    <id>http://example.com/2020/06/28/Marxism/</id>
     <published>2020-06-28T02:29:17.000Z</published>
     <updated>2020-06-28T09:25:06.225Z</updated>
     
@@ -221,15 +234,15 @@
     
     
     
-    <category term="Philosophy" scheme="https://www.martinhyj.xyz/categories/Philosophy/"/>
+    <category term="Philosophy" scheme="http://example.com/categories/Philosophy/"/>
     
     
   </entry>
   
   <entry>
     <title>Sassy Girl</title>
-    <link href="https://www.martinhyj.xyz/2020/05/07/My%20Sassy%20Girl/"/>
-    <id>https://www.martinhyj.xyz/2020/05/07/My%20Sassy%20Girl/</id>
+    <link href="http://example.com/2020/05/07/My%20Sassy%20Girl/"/>
+    <id>http://example.com/2020/05/07/My%20Sassy%20Girl/</id>
     <published>2020-05-07T12:44:54.000Z</published>
     <updated>2020-06-05T17:03:28.215Z</updated>
     
@@ -244,14 +257,14 @@
     
     
     
-    <category term="movie" scheme="https://www.martinhyj.xyz/tags/movie/"/>
+    <category term="movie" scheme="http://example.com/tags/movie/"/>
     
   </entry>
   
   <entry>
     <title>three</title>
-    <link href="https://www.martinhyj.xyz/2020/05/03/three/"/>
-    <id>https://www.martinhyj.xyz/2020/05/03/three/</id>
+    <link href="http://example.com/2020/05/03/three/"/>
+    <id>http://example.com/2020/05/03/three/</id>
     <published>2020-05-03T12:50:17.000Z</published>
     <updated>2020-06-05T17:00:15.716Z</updated>
     
@@ -267,15 +280,15 @@
     
     
     
-    <category term="devotion" scheme="https://www.martinhyj.xyz/categories/devotion/"/>
+    <category term="devotion" scheme="http://example.com/categories/devotion/"/>
     
     
   </entry>
   
   <entry>
     <title>Two</title>
-    <link href="https://www.martinhyj.xyz/2020/04/11/two/"/>
-    <id>https://www.martinhyj.xyz/2020/04/11/two/</id>
+    <link href="http://example.com/2020/04/11/two/"/>
+    <id>http://example.com/2020/04/11/two/</id>
     <published>2020-04-11T09:29:26.387Z</published>
     <updated>2020-04-19T09:29:26.000Z</updated>
     
@@ -293,15 +306,15 @@
     
     
     
-    <category term="term" scheme="https://www.martinhyj.xyz/categories/term/"/>
+    <category term="term" scheme="http://example.com/categories/term/"/>
     
     
   </entry>
   
   <entry>
     <title>One</title>
-    <link href="https://www.martinhyj.xyz/2020/04/10/one/"/>
-    <id>https://www.martinhyj.xyz/2020/04/10/one/</id>
+    <link href="http://example.com/2020/04/10/one/"/>
+    <id>http://example.com/2020/04/10/one/</id>
     <published>2020-04-10T09:29:26.000Z</published>
     <updated>2020-04-11T09:29:26.000Z</updated>
     
@@ -317,12 +330,12 @@
     
     
     
-    <category term="record" scheme="https://www.martinhyj.xyz/categories/record/"/>
+    <category term="record" scheme="http://example.com/categories/record/"/>
     
-    <category term="memory" scheme="https://www.martinhyj.xyz/categories/record/memory/"/>
+    <category term="memory" scheme="http://example.com/categories/record/memory/"/>
     
     
-    <category term="life" scheme="https://www.martinhyj.xyz/tags/life/"/>
+    <category term="life" scheme="http://example.com/tags/life/"/>
     
   </entry>
   
