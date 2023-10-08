@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tuotuoliny</title>
+  
+  <subtitle>Life</subtitle>
+  <link href="https://www.martinhyj.xyz/atom.xml" rel="self"/>
+  
+  <link href="https://www.martinhyj.xyz/"/>
+  <updated>2023-10-08T10:16:12.952Z</updated>
+  <id>https://www.martinhyj.xyz/</id>
+  
+  <author>
+    <name>martin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>singleton</title>
+    <link href="https://www.martinhyj.xyz/2023/10/08/singleton/"/>
+    <id>https://www.martinhyj.xyz/2023/10/08/singleton/</id>
+    <published>2023-10-08T10:16:12.000Z</published>
+    <updated>2023-10-08T10:16:12.952Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.martinhyj.xyz/2021/04/16/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A31/"/>
+    <id>https://www.martinhyj.xyz/2021/04/16/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A31/</id>
+    <published>2021-04-16T09:29:52.946Z</published>
+    <updated>2021-04-16T12:29:56.311Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="蓝桥杯快来了，给大家分享一道蓝桥杯的题目"><a href="#蓝桥杯快来了，给大家分享一道蓝桥杯的题目" class="headerlink" title="蓝桥杯快来了，给大家分享一道蓝桥杯的题目"></a>蓝桥杯快来了，给大家分享一道蓝桥杯的题目</h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>小明想知道，满足以下条件的<strong>正整数</strong>序列的<strong>数量</strong>：</p><ol><li>第一项为 n；</li><li>第二项不超过 n；</li><li>从第三项开始，每一项小于前两项的差的绝对值。<br>请计算，对于给定的 n，有多少种满足条件的序列。<br>【输入格式】<br>输入一行包含一个整数 n。<br>【输出格式】<br>输出一个整数，表示答案。答案可能很大，请输出答案除以10000的余数。</li></ol><p>【样例输入】<br>4<br>【样例输出】<br>7<br>【样例说明】<br>以下是满足条件的序列：<br>4 1<br>4 1 1<br>4 1 2<br>4 2<br>4 2 1<br>4 3<br>4 4<br>【评测用例规模与约定】<br>对于 20% 的评测用例，1 &lt;&#x3D; n &lt;&#x3D; 5；<br>对于 50% 的评测用例，1 &lt;&#x3D; n &lt;&#x3D; 10；<br>对于 80% 的评测用例，1 &lt;&#x3D; n &lt;&#x3D; 100；<br>对于所有评测用例，1 &lt;&#x3D; n &lt;&#x3D; 1000。</p><h4 id="题解基本思路（看不懂的可以直接看Summarize）"><a href="#题解基本思路（看不懂的可以直接看Summarize）" class="headerlink" title="题解基本思路（看不懂的可以直接看Summarize）"></a>题解基本思路（看不懂的可以直接看Summarize）</h4><ul><li>首先从样例输出来看，该序列的<strong>长度</strong>至少为<strong>2</strong></li><li>用递归枚举的方法来做这道题肯定是很耗时的，所以采用一点动态规划的思想</li><li>First, 先考虑长度为2的序列, n1 n2;类似于 <em>1 1，2 1， 2 2</em>这样。</li><li>Second,  我们考虑长度为3的序列，从样例来看，类似于 <em>4 1 1,  4 2 1，4 1 2</em> 这样的序列；我们只需观察该序列中的2，3两位，你会发现有熟悉 <em>1 1, 2 1</em>,他们属于我们n&#x3D;1,n&#x3D;2中符合条件的序列，也就是First中的情况；但是，你也会发现这里误入了一个 <em>1 2</em>，它似乎就让我们有点陌生了。</li><li>Then，我们在考虑长度为4的序列… 哈哈哈,皮一下，其实我们考虑以上两种情况就足以了。</li></ul><h5 id="Summarize"><a href="#Summarize" class="headerlink" title="Summarize"></a>Summarize</h5><ul><li>刚刚只是给大家引了下路，这里给大家举个例子，对于给定的数字n，我用f(a，b)表示序列以a,b开头的序列的个数，如f(1,1)&#x3D;1, f(4,1)&#x3D;3，这个可以简单的笔算出来。</li><li>规律就是，如果我们想知道所有 以<em>5 2 …<em>开头的序列的个数，我们是不是只需要知道以</em>2 1, 2,2</em>开头的序列的个数和就行了呢?（<strong>因为从第三项开始，每一项小于前两项的差的绝对值</strong>）而要知道 <em>2 1, 2,2</em>开头序列的个数,就可以从第一步轻松得到；即使上升一个较大的数值n，我们也能够递推至最小的子问题，只要我们将每种不同开头的个数储存起来，就能避免很多的重复运算，接着往下看</li><li>在用二维数组处理时，我们<strong>假设</strong> <em>1 2</em>（ 1 4）这样特殊的”开头”的序列存在，他们用来储存 n3&lt;n2 时对应序列的值,这样就可以和上面统一了。对于如何得到这个值，如求1 4 这样开头的序列，<strong>我们只需在多处理一步</strong>，就又变成了4 1, 4  2这样我们熟悉的处理了。</li></ul><h4 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">list_count</span>(<span class="params">n</span>):  </span><br><span class="line">  <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        动态规划: 构建 (n+1)*(n+1)整形矩阵</span></span><br><span class="line"><span class="string">        buf[i][j]: (i&gt;=1, j&gt;=1) 表示 i,j..开头的序列</span></span><br><span class="line"><span class="string">        4 1 2 3</span></span><br><span class="line"><span class="string">        n1 n2 n3 n4</span></span><br><span class="line"><span class="string">        由题：n1 &gt; n2, n3&lt;|n1 -n2|</span></span><br><span class="line"><span class="string">        假设，如果将n1去掉后：n2,n3,n4 也满足要求</span></span><br><span class="line"><span class="string">        此时存在情况：</span></span><br><span class="line"><span class="string">        1:</span></span><br><span class="line"><span class="string">            n2=n3, buf[n1][n2]=1</span></span><br><span class="line"><span class="string">        2: </span></span><br><span class="line"><span class="string">            n2&gt;n3, buf[n1][n2]=buf[n2][1]+...+buf[n2][ni] (1&lt;i&lt;n2-n3-1)</span></span><br><span class="line"><span class="string">        3: </span></span><br><span class="line"><span class="string">            n2&lt;n3，取｜n2-n3｜, buf[n1][n2]=buf[n3][1]+...+buf[n3][ni] (1&lt;i&lt;|n2-n3|)</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  buf=[[<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,n+<span class="number">1</span>)] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,n+<span class="number">1</span>)]</span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        <span class="comment">#主处理</span></span><br><span class="line">          <span class="keyword">if</span> i-j&gt;<span class="number">1</span>:</span><br><span class="line">              buf[i][j]+=<span class="number">1</span></span><br><span class="line">              <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i-j):</span><br><span class="line">                  buf[i][j]+=buf[j][k]</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              buf[i][j]+=<span class="number">1</span></span><br><span class="line">          buf[i][j]%=<span class="number">10000</span></span><br><span class="line">         <span class="comment">#辅助处理</span></span><br><span class="line">      <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i):</span><br><span class="line">          buf[x][i]+=<span class="number">1</span></span><br><span class="line">          <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">abs</span>(x-i)):</span><br><span class="line">              buf[x][i]+=buf[i][y]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">sum</span>(buf[n])%<span class="number">10000</span></span><br></pre></td></tr></table></figure><p>如图：n&#x3D;5时,buf的值为：</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gplt8cpfz3j304002wt8q.jpg" style="zoom:150%;" /><p>此方阵可以得到所有i&lt;&#x3D;n的结果，对buf[i]求和</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;蓝桥杯快来了，给大家分享一道蓝桥杯的题目&quot;&gt;&lt;a href=&quot;#蓝桥杯快来了，给大家分享一道蓝桥杯的题目&quot; class=&quot;headerlink&quot; title=&quot;蓝桥杯快来了，给大家分享一道蓝桥杯的题目&quot;&gt;&lt;/a&gt;蓝桥杯快来了，给大家分享一道蓝桥杯的题目&lt;/h3&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LinearAlgebra</title>
+    <link href="https://www.martinhyj.xyz/2021/04/06/LinearAlgebra/"/>
+    <id>https://www.martinhyj.xyz/2021/04/06/LinearAlgebra/</id>
+    <published>2021-04-06T12:14:15.000Z</published>
+    <updated>2021-04-06T13:37:45.806Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h2><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><h4 id="1-几何意义（面积，体积）"><a href="#1-几何意义（面积，体积）" class="headerlink" title="1.几何意义（面积，体积）"></a>1.几何意义（面积，体积）</h4><h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="1-线性空间"><a href="#1-线性空间" class="headerlink" title="1 线性空间"></a>1 线性空间</h4><ul><li>线性变换</li><li>基</li><li>仿射空间（点向量，向量与向量）</li><li>笛卡尔坐标系（直角坐标系，坐标系不一定非的是直角，右手定则）</li></ul><h4 id="2-欧几里得空间"><a href="#2-欧几里得空间" class="headerlink" title="2. 欧几里得空间"></a>2. 欧几里得空间</h4><ul><li>角和空间中距离之间联系的法则</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;线性代数&quot;&gt;&lt;a href=&quot;#线性代数&quot; class=&quot;headerlink&quot; title=&quot;线性代数&quot;&gt;&lt;/a&gt;线性代数&lt;/h2&gt;&lt;h3 id=&quot;行列式&quot;&gt;&lt;a href=&quot;#行列式&quot; class=&quot;headerlink&quot; title=&quot;行列式&quot;&gt;&lt;/a&gt;行列</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>context(上下文)</title>
+    <link href="https://www.martinhyj.xyz/2020/10/02/context-%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
+    <id>https://www.martinhyj.xyz/2020/10/02/context-%E4%B8%8A%E4%B8%8B%E6%96%87/</id>
+    <published>2020-10-02T05:38:13.000Z</published>
+    <updated>2021-05-29T09:42:13.091Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="context"><a href="#context" class="headerlink" title="context"></a>context</h4><blockquote><p>作用域</p></blockquote><ul><li><p>函数作用域: 跳转标签名 </p></li><li><p>文件作用域:如果一个标识符声明在所有语句块之外，同时也在形参列表之外，我们就称该标识符具有文件作用域</p></li><li><p>语句块作用域：{}</p></li><li><p>函数原型作用域: returntype function( ………..)</p><blockquote><p>全局函数和静态函数</p></blockquote></li><li><p>extern(外部连接，名副其实的全局函数,可以连接不同源文件 )</p><p>定义（在文件作用域中定义）可以被外部（外部文件作用域）连接的全局对象</p><p>注：实体，符号重定义，初始化</p></li><li><p>static（内部连接，静态函数，只在当前所属源文件）</p><blockquote><p>局部对象</p></blockquote></li><li><p>auto</p></li><li><p>register(逐渐废弃)</p></li></ul><blockquote><p>_Thread_local</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;context&quot;&gt;&lt;a href=&quot;#context&quot; class=&quot;headerlink&quot; title=&quot;context&quot;&gt;&lt;/a&gt;context&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;作用域&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;函数作</summary>
+      
+    
+    
+    
+    
+    <category term="c" scheme="https://www.martinhyj.xyz/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈字符</title>
+    <link href="https://www.martinhyj.xyz/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/"/>
+    <id>https://www.martinhyj.xyz/2020/09/29/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6/</id>
+    <published>2020-09-29T10:18:42.000Z</published>
+    <updated>2020-11-06T14:32:29.688Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><h4 id="首先了解下ASCII"><a href="#首先了解下ASCII" class="headerlink" title="首先了解下ASCII"></a>首先了解下ASCII</h4></blockquote><ul><li><p><a href="https://baike.baidu.com/item/ASCII/309296?fr=aladdin">ASCII</a> (American Standard Code for Information Interchange): 美国信息交换标准代码</p></li><li><p>在计算机中，所有数据的存储都适用二进制数来表示，因为计算机用高低电平来表示1与0；例如，像a、b、c、d这样的52个字母（包括大写）以及0、1等数字还有一些常用的符号（例如*、#、@等）在计算机中存储时也要使用二进制数来表示，ASCII编码就是美国（ANSI）出台的供不同计算机在相互通信时共同遵守的西文字符编码标准，后来被ISO定为国际标准，适用于所有拉丁字母。</p></li><li><p>起初，ASCII由七位表示，共可以表示128个字符；后在进化为由8位表示，可以表示256个字符。</p></li><li><p>通俗的讲，该编码规则就是用简单的数字来特殊表示我们常用的一些字符（字母，符号，数字）,例如：可以这样讲，在ASCII编码下，数字0就表示NULL，整数48就表示字符0</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7rbfcz6uj30l8077t9p.jpg" style="zoom:80%;" /><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7rbgx8kzj30l80773zd.jpg" style="zoom:80%;" />  [ASCII对照表](http://ascii.911cha.com)</li></ul><blockquote><h3 id="编程语言-C-中的字符"><a href="#编程语言-C-中的字符" class="headerlink" title="编程语言(C)中的字符"></a>编程语言(C)中的字符</h3></blockquote><ul><li><p>C语言中，也用ASCII字符集来表示基本字符，一个字符类型char用一字节（8位）表示。</p></li><li><p>字符字面量用单引号，里面包含一个或多个字符；如：’a’,’123’都是有效的字符字面量；</p></li><li><p>C11规定，一个字符字面量具有int类型（意为当我们可以把一个字符当作int类型来操作，如果我们想的话），如果将一个字符字面量赋值给一个char类型，那么将该字符字面量的最低有效位赋值给它。可以理解为字符类型只能够识别8位的数据，所以当使用多字符字面量或者int类型赋值给字符变量和想用字符形式表示时，都采用上述方法。</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7qruchxcj30ho09440b.jpg" style="zoom:80%;" /><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj7qrwlyw1j30as03caac.jpg" style="zoom:80%;" /></li><li><p>不是所有的字符字面量都能回显在显示台，如控制字符’\n’,’\t’之类的特殊字符。</p></li><li><p>用\后面紧跟1到3个八进制数，来用8进制编码表示一个字符，如：\7、\12、\123；用\x后面跟一个16进制数来用16进制编码表示一个字符,如：\x0a、\x30。</p></li><li><p>#在8位的范围内，char与int类型（无符号）可以看作兼容的#</p></li></ul><blockquote><h3 id="其他字符编码"><a href="#其他字符编码" class="headerlink" title="其他字符编码"></a>其他字符编码</h3></blockquote><ul><li>Unicode</li><li>GB2312(汉字编码)</li><li>GBK</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;h4 id=&quot;首先了解下ASCII&quot;&gt;&lt;a href=&quot;#首先了解下ASCII&quot; class=&quot;headerlink&quot; title=&quot;首先了解下ASCII&quot;&gt;&lt;/a&gt;首先了解下ASCII&lt;/h4&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a</summary>
+      
+    
+    
+    
+    
+    <category term="C" scheme="https://www.martinhyj.xyz/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.martinhyj.xyz/2020/08/13/Python/"/>
+    <id>https://www.martinhyj.xyz/2020/08/13/Python/</id>
+    <published>2020-08-13T11:51:44.146Z</published>
+    <updated>2020-10-06T09:14:55.812Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><!-- START doctoc generated TOC please keep comment here to allow auto update --><!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --><ul><li><a href="#python-ide">Python IDE</a></li><li><a href="#python-%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E7%A7%AF%E7%B4%AF">Python 爬虫相关积累</a></li><li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a></li></ul><!-- END doctoc generated TOC please keep comment here to allow auto update --><hr><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ghrjlpy1tdj30i30bp0th.jpg" alt="Spider!!!!"></p><h3 id="Python-IDE"><a href="#Python-IDE" class="headerlink" title="Python IDE"></a>Python IDE</h3><blockquote><p>visual studio code(VsCode) </p></blockquote><blockquote><blockquote><p>PyCharm</p></blockquote></blockquote><blockquote><blockquote><blockquote><p>IDLE(Shell)   </p></blockquote></blockquote></blockquote><h3 id="Python-爬虫相关积累"><a href="#Python-爬虫相关积累" class="headerlink" title="Python 爬虫相关积累"></a>Python 爬虫相关积累</h3><ul><li><p>urllib(python3,urllib进行了统一)[^1]</p><ul><li>Request(请求)：构造代理</li><li>Parse(解析)</li></ul></li><li><p>BeautifulSoup   </p><ul><li>BeautifulSoup(解析网页)，操控标签      </li><li>网页解析误区:(<a href="https://zhidao.baidu.com/question/503566841.html">Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.</a>)</li></ul></li><li><p>re[^2]</p><table><thead><tr><th align="center">方法</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">Compile</td><td align="center">compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象</td></tr><tr><td align="center">Sub</td><td align="center">用pattern的匹配项替换字符串中的指定字符</td></tr><tr><td align="center">Match</td><td align="center">尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none</td></tr><tr><td align="center">Finall</td><td align="center">在字符串中找到正则表达式所匹配的所有子串，并返回一个列表</td></tr><tr><td align="center">Split</td><td align="center">用pattern匹配的串分割字符串，返回列表</td></tr><tr><td align="center">Search</td><td align="center">扫描整个字符串并返回第一个成功的匹配</td></tr></tbody></table><p> 参考网站：<a href="https://www.cnblogs.com/hongbo-tao/p/11853643.html">正则表达式基础</a> <a href="https://www.runoob.com/python3/python3-reg-expressions.html">菜鸟教程</a></p></li><li><p>file(文件操作)[^3]</p><table><thead><tr><th align="center">方法</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">Open</td><td align="center">打开一个文件，并返回文件对象</td></tr><tr><td align="center">Read</td><td align="center">从文件读取指定的字节数，如果未给定或为负则读取所有</td></tr><tr><td align="center">Write</td><td align="center">将字符串写入文件，返回的是写入的字符长度</td></tr><tr><td align="center">Close</td><td align="center">关闭文件对象</td></tr></tbody></table></li></ul><p>参考网站:<a href="https://www.runoob.com/python3/python3-file-methods.html">菜鸟教程</a></p><ul><li><p>Selenium</p><p> webdriver(模拟浏览器)：可抓取动态页面;在连续加载web页面时，应设置加载等待（显示等待WebDriverWait,，隐式等待implicitly_wait，强制等待(sleep)），否则在进行页面内容获取操作时，会得不到相关内容</p><p> 参考网站：<a href="http://www.selenium.org.cn/1598.html">官方教程</a> <a href="https://blog.csdn.net/weixin_36279318/article/details/79475388">CSDN教程</a></p></li><li><p>xlwt</p><ul><li>Workbook(构造xls对象)：创建workbook、</li><li>Add_sheet</li><li>Write,read</li></ul></li><li><p>Ajax( Asynchronous JavaScript and XML)在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容</p></li><li><p><a href="https://baike.baidu.com/item/aspx/203251?fr=aladdin">aspx</a>:aspx文件是微软的在<a href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8">服务器</a>端运行的<a href="https://baike.baidu.com/item/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5">动态网页</a>文件，而不像静态的html文件。</p></li><li><p>多行语句的写法</p><pre><code> 1：:每行以\结尾，\为续行符 2：（），[], &#123;&#125;中无需使用\ 3：多行字符串（使用3引号或3双引号）：&quot;&quot;&quot; &quot;&quot;&quot;, &#39;&#39;&#39; &#39;&#39;&#39;,也可作为多行注释</code></pre></li><li><p>Lxml(css选择器 )</p><table><thead><tr><th align="center">操作</th><th align="center">方法</th></tr></thead><tbody><tr><td align="center">选择所有标签</td><td align="center">*</td></tr><tr><td align="center">选择<a>标签</td><td align="center">a</td></tr><tr><td align="center">选择所有class&#x3D;”link”的元素</td><td align="center">.link</td></tr><tr><td align="center">选择class&#x3D;”link”的<a>标签</td><td align="center">a.link</td></tr><tr><td align="center">选择id&#x3D;”home”的<a>标签</td><td align="center">a#home</td></tr><tr><td align="center">选择父元素为<a>标签的所有<span>标签</td><td align="center">a &gt; span</td></tr><tr><td align="center">选择<a>标签内部所有<span></td><td align="center">a span</td></tr><tr><td align="center">选择title属性为“home”的所有<a>标签</td><td align="center">a[titile&#x3D;Home]</td></tr></tbody></table></li></ul><p>​       参考网址<a href="https://lxml.de/">官网教程</a></p><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul><li><p>mysql</p><ol><li>python3可使用：pymysql</li><li>sql语句的参数传递时，参数在字符串以外，理念同于C(printf(“%s %d % f”,string, int, float))</li><li>Mysql语句中的占位符均为%s,</li><li>Mysql的端口号为3306</li><li>(Unknown column ‘xxxx’ in ‘field list’”)解决方法：在MySQL中，不论是更新还是插入一个字符，得用‘str’，而不是直接str，即获取字符串接收的方式是’str‘</li></ol></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;python&quot;&gt;&lt;a href=&quot;#python&quot; class=&quot;headerlink&quot; title=&quot;python&quot;&gt;&lt;/a&gt;python&lt;/h2&gt;&lt;!-- START doctoc generated TOC please keep comment here </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Network</title>
+    <link href="https://www.martinhyj.xyz/2020/07/17/TCPIP/"/>
+    <id>https://www.martinhyj.xyz/2020/07/17/TCPIP/</id>
+    <published>2020-07-17T15:14:22.000Z</published>
+    <updated>2020-09-23T11:32:35.806Z</updated>
+    
+    
+    
+    
+    
+    <category term="NetWork, C" scheme="https://www.martinhyj.xyz/tags/NetWork-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈浮点数</title>
+    <link href="https://www.martinhyj.xyz/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
+    <id>https://www.martinhyj.xyz/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/</id>
+    <published>2020-07-17T15:14:22.000Z</published>
+    <updated>2021-08-04T08:39:47.361Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="——浅谈浮点数"><a href="#——浅谈浮点数" class="headerlink" title="——浅谈浮点数"></a>——浅谈浮点数</h4><blockquote><p><strong>计算机中的整数,小数</strong></p></blockquote><ul><li><p><em>整数，通俗的讲就是在各进制下；数的组成全由（1，2，3…..）等整数组成；不存在小数（分数）部分或小数部分为0，在计算机中所有的整数由0,1组成，表示成二进制数并储存在存储设备中</em>；</p></li><li><p><em>小数是一种特殊的实数，在数值计算中有至关重要的作用；小数也可以表示成二进制，如：0.125就等于0.001；小数点将小数分成整数与小数两部分，可是在计算机中，机器只认识0，1；那么我们怎么在计算机中存储小数点呢？</em></p></li></ul><hr><blockquote><p><strong>浮点数</strong></p></blockquote><ul><li><p>浮点数的引入解决了小数在机器中存储的问题，但其作用却不止于此；</p><p>​                                    <em>浮点数不是就代表小数！！！</em></p></li><li><p><em>官方解释：浮点数，是属于<a href="https://baike.baidu.com/item/%E6%9C%89%E7%90%86%E6%95%B0/105546">有理数</a>中某特定<a href="https://baike.baidu.com/item/%E5%AD%90%E9%9B%86/5017034">子集</a>的数的数字表示，在计算机中用以近似表示任意某个<a href="https://baike.baidu.com/item/%E5%AE%9E%E6%95%B0/296419">实数</a>。具体的说，这个实数由一个<a href="https://baike.baidu.com/item/%E6%95%B4%E6%95%B0/1293937">整数</a>或<a href="https://baike.baidu.com/item/%E5%AE%9A%E7%82%B9%E6%95%B0/11030127">定点数</a>（即<a href="https://baike.baidu.com/item/%E5%B0%BE%E6%95%B0/6244963">尾数</a>）乘以某个基数（计算机中通常是2）的整数次幂得到，这种表示方法类似于基数为10的<a href="https://baike.baidu.com/item/%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/756685">科学计数法</a>。</em></p><ul><li><em>引入角度1: 浮点数既然可以在计算机中近似表示某个实数，那么就可以解决小数的问题</em></li><li><strong>角度2: 在一些16，32位的机器中，可是利用浮点数表示法近似表示更大或更小的数（实数范围上），如：6.023*10<sup>23</sup>(摩尔常数)</strong></li></ul></li><li><p>定点数与浮点数</p><ul><li><p><em>定点数的含义是，在计算机中，我们表示一个实数的整数部分与小数部分的精度是固定的；比如在16位的系统中，可能用8位表示整数部分，8位表示小数部分（也可以其他分法）；但这个方法有明显的局限性；比如，以上定点数只能表示（0，2<sup>8</sup>-1）,(-2<sup>8</sup>, 2<sup>7</sup>-1)范围内的数。</em></p></li><li><p><em>浮点数的定义相对于定点数，我们不固定小数点的位置，以实现更大的精度</em></p></li></ul></li></ul><hr><blockquote><p><strong>浮点数在计算机中的表示</strong></p></blockquote><ul><li><p>IEEE标准</p><ul><li><p>浮点数的一般二进制表示法：整数部分第n位就表示2<sup>n</sup>，n从第0位开始计;小数部分第m位表示2<sup>-m</sup>，m从1开始计：0.125就等于0.001；</p></li><li><p>将实数转化为IEEE754标准规格化的浮点数</p><ol><li><p><em>确定符号位（0，1）</em></p></li><li><p><em>将该数写成一般的二进制小数形式</em></p></li><li><p><em>用二进制科学计数法表示该数，将小数点放在从左往右数第一个1后边。</em></p><p>n&#x3D; m * 2<sup>e</sup></p></li><li><p><em>尾数即为小数点后那串二进制数；阶码即上述得到的指数加上偏差值所得的和（32位中为127，64位中为1024）</em></p></li></ol></li></ul></li><li><p>IEEE754规格化浮点数</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj0s2sk5acj30fy019a9v.jpg"></p></li><li><p>32位浮点数(float 单精度)</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj0rxll3htj30e9033wed.jpg" style="zoom:80%;" /></li><li><p>64位浮点数（double 双精度）</p></li></ul><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj0rwy9ykhj30e9036a9y.jpg" style="zoom:80%;"/><p>​<em>从图中可以看出，无论是32位系统，还是64位；他们的后23位或52位来表示转换成科学计数后的小数部分，他们可以无限接近一，但永远小于1；并且对于一些不能用2的幂表示的小数，无论用多少位来表示，也不可能取到完全相等的一个值，只能是在有限位数下得到一个最近它的数，所以计算机中，浮点数是用于近似的表示某个任意的实数。</em></p><ul><li>long double(拓展双精度浮点，80bit)</li></ul><hr><blockquote><p><strong>浮点数详细讲解</strong></p></blockquote><ul><li><p>浮点数间进行运算可能会造成误差</p><p><em>因为一个浮点数的真正值只是表达预期值的一个近似值（部分小数部分可以由2的幂组成的浮点数忽略），其精度取决于不同的系统位数，在进行运算的过程中，可能会产生细微的误差（近似值会改变），并随着运算次数不断积累。有时候，为避免这种误差我们可以将其转换为整数运算（特别是python中，python支持无限制，且准确的整数运算）</em></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj1xo5f5xmj30mh07umyl.jpg"></p></li><li><p>两个浮点数进行比较时，可能会产生不可预期的错误</p><p><em>鉴于浮点数之间进行运算可能会产生误差，自然如果我们在某些时候将两个浮点数来进行比较也是有风险的</em></p><p><strong>上述代码输出如下</strong></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gj1xokd0zoj30ho02gwev.jpg"></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;——浅谈浮点数&quot;&gt;&lt;a href=&quot;#——浅谈浮点数&quot; class=&quot;headerlink&quot; title=&quot;——浅谈浮点数&quot;&gt;&lt;/a&gt;——浅谈浮点数&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;计算机中的整数,小数&lt;/strong&gt;&lt;/p&gt;
+&lt;/blo</summary>
+      
+    
+    
+    
+    
+    <category term="C" scheme="https://www.martinhyj.xyz/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PageTable</title>
+    <link href="https://www.martinhyj.xyz/2020/07/02/PageTable/"/>
+    <id>https://www.martinhyj.xyz/2020/07/02/PageTable/</id>
+    <published>2020-07-02T14:05:20.000Z</published>
+    <updated>2021-08-03T09:14:17.605Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="虚拟内存-分页-页表"><a href="#虚拟内存-分页-页表" class="headerlink" title="虚拟内存-&gt;分页-&gt;页表"></a>虚拟内存-&gt;分页-&gt;页表</h4><ul><li>在大多数系统中，每个进程都有一个页表，保存在内存中。</li><li>页表项，页表中储存页信息的项（存在位，修改位，访问权限位，页框号）</li><li>页表也是页，服从分页管理</li><li>逻辑地址（页号+偏移量）-&gt;页表(页框号)-&gt;物理地址（页框号+偏移量）</li><li>2^10&#x3D;1024</li><li>多级页表</li><li>抖动 Thrashing</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;虚拟内存-分页-页表&quot;&gt;&lt;a href=&quot;#虚拟内存-分页-页表&quot; class=&quot;headerlink&quot; title=&quot;虚拟内存-&amp;gt;分页-&amp;gt;页表&quot;&gt;&lt;/a&gt;虚拟内存-&amp;gt;分页-&amp;gt;页表&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在大多数系统中，每个进程都有一个</summary>
+      
+    
+    
+    
+    <category term="OS" scheme="https://www.martinhyj.xyz/categories/OS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Marxism1</title>
+    <link href="https://www.martinhyj.xyz/2020/06/28/Marxism/"/>
+    <id>https://www.martinhyj.xyz/2020/06/28/Marxism/</id>
+    <published>2020-06-28T02:29:17.000Z</published>
+    <updated>2020-06-28T09:25:06.225Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><h1 id="世界的物质性及其发展规律"><a href="#世界的物质性及其发展规律" class="headerlink" title="世界的物质性及其发展规律"></a>世界的物质性及其发展规律</h1></li><li><h3 id="物质"><a href="#物质" class="headerlink" title="物质"></a>物质</h3></li><li><p>物质：<code>不依赖于人的意识而存在，并能为人类的意识所反映的客观存在</code></p></li><li><p>意识：<code>意识是人体的机能和属性，是客观世界的主观映象</code></p></li><li><p>物质与意识的辩证关系：<code>1.物质决定意识 2.意识反作用于物质 3.主观能动性和客观规律性的统一</code></p></li><li><p>世界物质的统一性   <code>1:意识统一与物质：意识的能动性的发挥必须以尊重物质世界的客观规律为前提，其是物质世界中一种特殊的存在； 2: 人类社会也统一与物质：人类社会是物质世界的组成成分、人类获取生活资料的活动是物质性的活动、人类社会存在和发展的基础是物质资料的生产方式</code></p></li><li><h3 id="事物的联系与发展"><a href="#事物的联系与发展" class="headerlink" title="事物的联系与发展"></a>事物的联系与发展</h3></li><li><p>辩证法是用联系和发展的观点看待世界，认为事物是普遍联系和发展变化的，变化的原因在于事物内部的矛盾性。   </p></li><li><h3 id="量变质变规律和否定之否定规律"><a href="#量变质变规律和否定之否定规律" class="headerlink" title="量变质变规律和否定之否定规律"></a>量变质变规律和否定之否定规律</h3></li><li><p>量变与质变的辩证关系<code>1.量变是质变的必要准备2.质变是量变的必然结果 3.量变和质变是相互渗透的</code></p></li><li><p>否定之否定规律的辩证关系：<code>1.辩证的否定观是事物内在矛盾引起的自我否定，是包含肯定的否定；它既是发展的环节，又是联系的环节，即扬弃。在新事物取代旧事物的过程中，辩证的否定是决定性的环节。2.辩证的否定不是一次完成的，而是经历两次否定、三个阶段的有规律的过程，即“肯定一否定一否定之否定”的过程。</code>   </p></li><li><h3 id="唯物辩证法"><a href="#唯物辩证法" class="headerlink" title="唯物辩证法"></a>唯物辩证法</h3></li><li><p>对立统一规律：<code>事物是在对立统一中发展的，其揭示了事物普遍联系的根本内容和发展变化的内在动力，从根本上回答了事物为何会发展的问题</code></p></li><li><p>矛盾的统一性，斗争性，普遍性、特殊性。      </p></li><li><h1 id="实践与认识及其发展规律"><a href="#实践与认识及其发展规律" class="headerlink" title="实践与认识及其发展规律"></a>实践与认识及其发展规律</h1></li><li><h3 id="实践与认识"><a href="#实践与认识" class="headerlink" title="实践与认识"></a>实践与认识</h3></li><li><p>实践: <code>是人类能动的改造世界的社会性的物质活动</code> <code>直接限制性，字节能动性、社会历史性</code></p></li><li><p>认识：<code>主体在实践基础上或通过实践对客体的能动的、创造性的反映。任何认识都是主体与客体相互作用的过程和结果。</code></p></li><li><p><code>感性认识是感觉、知觉、表象三种形式，其特点是直接性和具体性。理性认识是概念、判断、推理等形式，其特点是间接性和抽象性; 两者之间是辩证统一的，感性认识有待遇发展和深化成理性认识、理性认识依赖于感性认识、感性认识和理性认识相互渗透。</code></p></li><li><p>认识到实践的飞跃：<code>①从感性认识发展到理性认识，实现这一飞跃的条件：第一，必须占有丰富真实的感性材料；第二，运用科学思维方法对感性材料进行加工制作。②理性认识向实践：要从实际出发，坚持理论与实践相结合的原则，理论必须被群众掌握，转化为群众的自觉行动。</code></p></li><li><p>实践与认识的辩证运动及其规律：<code>客观事物本身的复杂性及发展过程的无限性，因此，认识的发展要经过“实践、认识、再实践、再认识”的循环往复的过程。</code>   </p></li><li><h3 id="真理与价值"><a href="#真理与价值" class="headerlink" title="真理与价值"></a>真理与价值</h3></li><li><p>真理：<code>真理是指人们对客观事物及其规律的正确</code>**认识(反映)**。</p></li><li><p>真理的客观性：<code>真理的内容是对</code><strong>客观事物</strong><code>及其规律的正确反映，真理中包含着不依赖于人和我人的意识的客观内容</code></p></li><li><p>真理的绝对性与相对性：<strong>绝对性</strong>：<code>真理主客观统一的缺点性和发展的无限性</code><strong>相对性</strong>：<code>在一定条件下，人们对客观事物及其本质和发展归路的正确认识总是有限度的，不完善的</code></p></li><li><p>真理与谬论：</p></li><li><p>真理的检验标准：<code>实践是检验真理的唯一标准,实践具有直接显示性的特点，人们通过实践把思想、理论在现实中实现出来，并把这种实现出来的东西同原来的思想、理论想对照、从而判断其是否正确</code></p></li><li><p>真理与价值的辩证统一：&#96;&#96;   </p></li><li><h3 id="认识世界和改造世界"><a href="#认识世界和改造世界" class="headerlink" title="认识世界和改造世界"></a>认识世界和改造世界</h3></li><li></li><li><h1 id="人类社会及其发展规律"><a href="#人类社会及其发展规律" class="headerlink" title="人类社会及其发展规律"></a>人类社会及其发展规律</h1></li><li><h3 id="社会基本矛盾"><a href="#社会基本矛盾" class="headerlink" title="社会基本矛盾"></a>社会基本矛盾</h3></li><li><p>社会存在,<code>社会生活的物质方面，包括自然地理环境、人口因素、物质生产方式</code></p></li><li><p>社会意识，<code>社会生活的精神方面；根据主体分为：个体意识，群体意识； 根据不同层次：社会心理，社会意识</code></p></li><li><p>生产力：<code>劳动资料，劳动对象，劳动者</code></p></li><li><p>生产关系：<code>进行生产时，人们相互之间的关系与联系</code></p></li><li><p>生产力决定生产关系<code>手推磨产生的是封建主的社会，蒸汽磨产生的是工业资本家的社会</code></p></li><li><p>生产关系对生产力具有能动的反作用，<code>当生产关系适合生产力发展的客观要求时，对生产力的发展起推动作用，当生产关系不适合生产力发展的客观要求时，就会阻碍生产力的发展。</code></p></li><li><p>经济基础，<code>是由社会发展到一定阶段的生产力所决定的生产关系的总和</code></p></li><li><p>上层建筑,<code>是指建立在一定经济基础上的意识形态以及与之相对应的制度、组织、设施</code></p></li><li><p><code>与生产力，生产关系一样，经济基础决定上层建筑，上层建筑反作用于经济基础，当其为适合生产力发展要求的经济基础服务时，就成为推动社会发展的进步力量；反之，当它为落后的经济基础服务时，就成为阻碍社会发展的消极力量</code></p></li><li><p><strong>生产力与生产关系矛盾运动的规律和经济基础和上层建筑矛盾运动的规律，是人类社会发展的一般规律。它们界定了社会形态的更替和历史发展的基本趋势</strong></p></li></ul><p>​     </p><ul><li><h3 id="社会历史发展的动力"><a href="#社会历史发展的动力" class="headerlink" title="社会历史发展的动力"></a>社会历史发展的动力</h3></li></ul><ol><li>社会基本矛盾</li><li>社会主要矛盾</li></ol><ul><li><p>阶级斗争</p></li><li><p>社会革命</p></li><li><p>改革</p></li><li><p>科学技术：<code>生产方式、生产方式、思维方式； 双刃剑</code></p></li><li><h3 id="人民群众的作用"><a href="#人民群众的作用" class="headerlink" title="人民群众的作用"></a>人民群众的作用</h3></li><li><p>唯物史观，<code>群众史观</code></p></li><li><p>唯心史观，<code>英雄史观</code></p></li><li><p><strong>人民群众<code>一切对社会历史发展起推动的人，指社会人口中绝大多数人</code>是历史的创造者</strong></p></li></ul><ol><li>物质财富的创造者</li><li>精神财富的创造者</li><li>社会变革的决定力量</li></ol><ul><li><strong>个人：历史人物，普通个人</strong></li></ul><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gg7uhqjb4lj30hs0cctaz.jpg" style="zoom:50%;" />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;世界的物质性及其发展规律&quot;&gt;&lt;a href=&quot;#世界的物质性及其发展规律&quot; class=&quot;headerlink&quot; title=&quot;世界的物质性及其发展规律&quot;&gt;&lt;/a&gt;世界的物质性及其发展规律&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;物质&quot;&gt;&lt;a</summary>
+      
+    
+    
+    
+    <category term="Philosophy" scheme="https://www.martinhyj.xyz/categories/Philosophy/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sassy Girl</title>
+    <link href="https://www.martinhyj.xyz/2020/05/07/My%20Sassy%20Girl/"/>
+    <id>https://www.martinhyj.xyz/2020/05/07/My%20Sassy%20Girl/</id>
+    <published>2020-05-07T12:44:54.000Z</published>
+    <updated>2020-06-05T17:03:28.215Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="My-Sassy-Girl"><a href="#My-Sassy-Girl" class="headerlink" title="My Sassy Girl"></a>My Sassy Girl</h4><p><img src="http://img1.cache.netease.com/cnews/2016/3/3/20160303151045148b3_550.jpg" alt="图标"></p><p>1:You got coffee in cafe, not drink coke or orange juice   </p><p>2: If she struck you, you just pretend feel too hurt, and if it is really hurt, you need pretend nothing   </p><p>3:At the day of you have been met one hundred days, you should give her a rose as a gift in her classroom, she’ll like it   </p><p>4:If she felt uncomfortable about her shoes, you have to change them by your   </p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhm7z0ykkj30kx0ci14v.jpg"></p><p>5:She like writing, you gonna encourage her  </p><p>6:I want meet a girl from furture, from my furture   </p><p>7:The destiny is building a brige between you and the people you love   </p><p>8:What do you think about the moment that a woman is most beauty? take off all clothes</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;My-Sassy-Girl&quot;&gt;&lt;a href=&quot;#My-Sassy-Girl&quot; class=&quot;headerlink&quot; title=&quot;My Sassy Girl&quot;&gt;&lt;/a&gt;My Sassy Girl&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://img1.cach</summary>
+      
+    
+    
+    
+    
+    <category term="movie" scheme="https://www.martinhyj.xyz/tags/movie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>three</title>
+    <link href="https://www.martinhyj.xyz/2020/05/03/three/"/>
+    <id>https://www.martinhyj.xyz/2020/05/03/three/</id>
+    <published>2020-05-03T12:50:17.000Z</published>
+    <updated>2020-06-05T17:00:15.716Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhwhjotirj30hs080aah.jpg"></p><ul><li>You want to start one thing sometimes, but you always say there is no place or emquipment that you have to need<br>You want to play basketball well and you say there is no ball, there is no playground<br>You want to sing well and you say there is no piano</li><li>You complained<br>You feel dispirited even</li><li>Then<br>Time flies!<br>What happened? Nothing<br>Beacuse you did nothing</li><li>At the same times you have spent<br>The people who has the better condition than you<br>The people like you<br>The people even worse than you<br>They done</li><li>You are still in origin place</li><li>Think about<br>Do you love it<br>What stop you</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/007S8ZIlly1gfhwhjotirj30hs080aah.jpg&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You want to start one thing sometimes, but yo</summary>
+      
+    
+    
+    
+    <category term="devotion" scheme="https://www.martinhyj.xyz/categories/devotion/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Two</title>
+    <link href="https://www.martinhyj.xyz/2020/04/11/two/"/>
+    <id>https://www.martinhyj.xyz/2020/04/11/two/</id>
+    <published>2020-04-11T09:29:26.387Z</published>
+    <updated>2020-04-19T09:29:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2020</p><h4 id="4"><a href="#4" class="headerlink" title="4"></a>4</h4><ul><li><p>Framework     架构</p></li><li><p>Architecture  架构</p></li><li><p>Opacity       不透明性，模糊</p></li><li><p>Alignment     对齐</p></li><li><p>Animate       动画，动态</p></li><li><p>Parallel      平行的，同时的</p></li><li><p>Duration      持续时间</p></li><li><p>Configuration 配置，布局，构造，结构</p></li><li><p>Syntax        语法，句法</p></li><li><p>Implicit      隐式的，不直接言明的</p></li><li><p>Delegate      委托，代表，授权</p></li><li><p>Priority      优先级，优先地</p></li><li><p>Constraint    约束，限制</p></li><li><p>Scale         规模，比例       </p></li><li><p>Appearance    外观，外貌</p></li><li><p>Drag          拖动</p></li><li><p>Clip          剪切</p></li><li><p>Paste         粘贴</p></li><li><p>Interaction   交互，交流，互动</p></li><li><p>Thread        线，线程</p></li><li><p>Multiplex     复用，多重</p></li><li><p>Map           映现，映射</p></li><li><p>DeadLock      死锁</p></li><li><p>Diagram       图，图表，示意图</p></li><li><p>View          视图</p></li><li><p>Inner         内部，内部的</p></li><li><p>Maintenance   维护</p></li><li><p>Oriented      使面向，使朝向</p></li><li><p>Advanced      高级（设置，选项）</p></li><li><p>Collaboration 合作，协作</p></li></ul><h4 id="5"><a href="#5" class="headerlink" title="5"></a>5</h4><ul><li><p>Collapse      重叠，折叠</p></li><li><p>Interval      间隔，时距</p></li><li><p>Radio         单选框</p></li><li><p>Checkbox      复选框</p></li><li><p>Prototype     原型，雏型</p></li><li><p>Thrashing     颠簸，抖动</p></li><li><p>Engine        引擎，发动机</p></li><li><p>Horizontal    水平的</p></li><li><p>Vertical      垂直的</p></li><li><p>Lateral       侧面的，横向的</p></li><li><p>Muscle        肌肉，威信</p></li></ul><h4 id="6"><a href="#6" class="headerlink" title="6"></a>6</h4><ul><li><p>Semaphore     信号量，信号标</p></li><li><p>Oolong        乌龙茶  </p></li><li><p>Filter        过滤，过滤器</p></li><li><p>Integrate     集成，合并</p></li><li><p>Separator     分隔符</p></li><li><p>Fragment      碎片，片段</p></li><li><p>Comment       评论，描述，批评</p></li><li><p>Register      登记，注册</p></li><li><p>Variant       变形，变体</p></li><li><p>Macro         宏指令</p></li><li><p>Meta-Object   元对象</p></li><li><p>Loop          回路，循环</p></li><li><p>Analogous     类似的</p></li><li><p>Outline       轮廓，大纲</p></li><li><p>Distinct      明显的，独特的</p></li><li><p>stable 稳定的</p></li><li><p>Implement 实现，执行</p></li><li><p>Hexadecimal 十六进值</p></li><li><p>Compress      压缩</p></li><li><p>Recurse      递归</p></li><li><p>Dispatch      发送，派遣</p></li><li><p>Literal          文字的</p></li><li><p>Frame         框架，结构</p></li><li><p>Loop        环形，圈</p></li><li><p>Register      登记，注册</p></li><li><p>Sprite       妖精,精灵,鬼怪,调皮鬼</p></li><li><p>Contradiction     矛盾，对立</p></li></ul><h4 id="8"><a href="#8" class="headerlink" title="8"></a>8</h4><ul><li>Parse      解析，从语法上分析   </li><li>Cursor     游标，指针   </li><li>Commit     提交   </li><li>Compile   编译   </li><li>Sheet    表单   </li><li>Module   模块</li></ul><h4 id="10"><a href="#10" class="headerlink" title="10"></a>10</h4><ul><li>Iterator 迭代器，迭代程序</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2020&lt;/p&gt;
+&lt;h4 id=&quot;4&quot;&gt;&lt;a href=&quot;#4&quot; class=&quot;headerlink&quot; title=&quot;4&quot;&gt;&lt;/a&gt;4&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Framework     架构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Architecture  架构&lt;/p</summary>
+      
+    
+    
+    
+    <category term="term" scheme="https://www.martinhyj.xyz/categories/term/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>One</title>
+    <link href="https://www.martinhyj.xyz/2020/04/10/one/"/>
+    <id>https://www.martinhyj.xyz/2020/04/10/one/</id>
+    <published>2020-04-10T09:29:26.000Z</published>
+    <updated>2020-04-11T09:29:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhwru1dxcj30du091jrv.jpg"></p><ul><li><em>Those times when you get up early and you work hard</em></li><li><em>Those times when you stay up late and you work hard</em></li><li><em>Those times when you don’t feel like working, you too tired, you don’t want to push yourself, but you do it anyway.</em></li><li><em>That is actually the dream</em></li></ul><p> <strong>-For Kobe Bryant</strong></p><ul><li><p><em>I was most working in a virtual world</em></p></li><li><p><em>I don’t believe the code change the world</em></p></li><li><p><em>I think the people change the world</em></p></li></ul><p>if you were in a bad situation, why not enjoy this sonnet</p><ul><li><p>Shall I compare thee to a summer’s day?</p></li><li><p>Thou art more lovely and more temperate:</p></li><li><p>Rough winds do shake the darling buds of May,</p></li><li><p>And summer’s lease hath all too short a date:</p></li><li><p>Sometime too hot the eye of heaven shines,</p></li><li><p>And often is his gold complexion dimmed,</p></li><li><p>And, every fair from fair sometime declines,</p></li><li><p>By chance,or nature’s changing course untrimmed;</p></li><li><p>But thy eternal summer shall not fade,</p></li><li><p>Nor lose possession of that fair thou ow’st,</p></li><li><p>Nor shall death brag thou wander stis his shade</p></li><li><p>When in eternal lines to time thou grow’st,</p></li><li><p>So long as men can breathe or eyes can see,</p></li><li><p>So long lives this, and this gives life to thee.</p></li></ul><p> <strong>-For William Shakespeare</strong></p><p>haha, I know you are confused</p><p>but Life is tough sometimes, right?  we need  be kind to him(her)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/007S8ZIlly1gfhwru1dxcj30du091jrv.jpg&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Those times when you get up early and you</summary>
+      
+    
+    
+    
+    <category term="record" scheme="https://www.martinhyj.xyz/categories/record/"/>
+    
+    <category term="memory" scheme="https://www.martinhyj.xyz/categories/record/memory/"/>
+    
+    
+    <category term="life" scheme="https://www.martinhyj.xyz/tags/life/"/>
+    
+  </entry>
+  
+</feed>
