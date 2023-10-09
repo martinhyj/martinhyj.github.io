@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="life study" />
+  <meta name="author" content="martin" />
+  <meta name="description" content="a man with dream" />
+  
+  
+  <title>
+    
+      蓝桥杯1 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="tuotuoliny" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">Hongbo</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="" href="https://github.com/martinhyj">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Jul 17, 2020
+  </h3>
+  <h1>
+    蓝桥杯1
+  </h1>
+  <div class="content markdown-body">
+    <h3 id="蓝桥杯快来了，给大家分享一道蓝桥杯的题目"><a href="#蓝桥杯快来了，给大家分享一道蓝桥杯的题目" class="headerlink" title="蓝桥杯快来了，给大家分享一道蓝桥杯的题目"></a>蓝桥杯快来了，给大家分享一道蓝桥杯的题目</h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>小明想知道，满足以下条件的<strong>正整数</strong>序列的<strong>数量</strong>：</p>
+<ol>
+<li>第一项为 n；</li>
+<li>第二项不超过 n；</li>
+<li>从第三项开始，每一项小于前两项的差的绝对值。<br>请计算，对于给定的 n，有多少种满足条件的序列。<br>【输入格式】<br>输入一行包含一个整数 n。<br>【输出格式】<br>输出一个整数，表示答案。答案可能很大，请输出答案除以10000的余数。</li>
+</ol>
+<p>【样例输入】<br>4<br>【样例输出】<br>7<br>【样例说明】<br>以下是满足条件的序列：<br>4 1<br>4 1 1<br>4 1 2<br>4 2<br>4 2 1<br>4 3<br>4 4<br>【评测用例规模与约定】<br>对于 20% 的评测用例，1 &lt;&#x3D; n &lt;&#x3D; 5；<br>对于 50% 的评测用例，1 &lt;&#x3D; n &lt;&#x3D; 10；<br>对于 80% 的评测用例，1 &lt;&#x3D; n &lt;&#x3D; 100；<br>对于所有评测用例，1 &lt;&#x3D; n &lt;&#x3D; 1000。</p>
+<h4 id="题解基本思路（看不懂的可以直接看Summarize）"><a href="#题解基本思路（看不懂的可以直接看Summarize）" class="headerlink" title="题解基本思路（看不懂的可以直接看Summarize）"></a>题解基本思路（看不懂的可以直接看Summarize）</h4><ul>
+<li>首先从样例输出来看，该序列的<strong>长度</strong>至少为<strong>2</strong></li>
+<li>用递归枚举的方法来做这道题肯定是很耗时的，所以采用一点动态规划的思想</li>
+<li>First, 先考虑长度为2的序列, n1 n2;类似于 <em>1 1，2 1， 2 2</em>这样。</li>
+<li>Second,  我们考虑长度为3的序列，从样例来看，类似于 <em>4 1 1,  4 2 1，4 1 2</em> 这样的序列；我们只需观察该序列中的2，3两位，你会发现有熟悉 <em>1 1, 2 1</em>,他们属于我们n&#x3D;1,n&#x3D;2中符合条件的序列，也就是First中的情况；但是，你也会发现这里误入了一个 <em>1 2</em>，它似乎就让我们有点陌生了。</li>
+<li>Then，我们在考虑长度为4的序列… 哈哈哈,皮一下，其实我们考虑以上两种情况就足以了。</li>
+</ul>
+<h5 id="Summarize"><a href="#Summarize" class="headerlink" title="Summarize"></a>Summarize</h5><ul>
+<li>刚刚只是给大家引了下路，这里给大家举个例子，对于给定的数字n，我用f(a，b)表示序列以a,b开头的序列的个数，如f(1,1)&#x3D;1, f(4,1)&#x3D;3，这个可以简单的笔算出来。</li>
+<li>规律就是，如果我们想知道所有 以<em>5 2 …<em>开头的序列的个数，我们是不是只需要知道以</em>2 1, 2,2</em>开头的序列的个数和就行了呢?（<strong>因为从第三项开始，每一项小于前两项的差的绝对值</strong>）而要知道 <em>2 1, 2,2</em>开头序列的个数,就可以从第一步轻松得到；即使上升一个较大的数值n，我们也能够递推至最小的子问题，只要我们将每种不同开头的个数储存起来，就能避免很多的重复运算，接着往下看</li>
+<li>在用二维数组处理时，我们<strong>假设</strong> <em>1 2</em>（ 1 4）这样特殊的”开头”的序列存在，他们用来储存 n3&lt;n2 时对应序列的值,这样就可以和上面统一了。对于如何得到这个值，如求1 4 这样开头的序列，<strong>我们只需在多处理一步</strong>，就又变成了4 1, 4  2这样我们熟悉的处理了。</li>
+</ul>
+<h4 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">list_count</span>(<span class="params">n</span>):  </span><br><span class="line">  <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        动态规划: 构建 (n+1)*(n+1)整形矩阵</span></span><br><span class="line"><span class="string">        buf[i][j]: (i&gt;=1, j&gt;=1) 表示 i,j..开头的序列</span></span><br><span class="line"><span class="string">        4 1 2 3</span></span><br><span class="line"><span class="string">        n1 n2 n3 n4</span></span><br><span class="line"><span class="string">        由题：n1 &gt; n2, n3&lt;|n1 -n2|</span></span><br><span class="line"><span class="string">        假设，如果将n1去掉后：n2,n3,n4 也满足要求</span></span><br><span class="line"><span class="string">        此时存在情况：</span></span><br><span class="line"><span class="string">        1:</span></span><br><span class="line"><span class="string">            n2=n3, buf[n1][n2]=1</span></span><br><span class="line"><span class="string">        2: </span></span><br><span class="line"><span class="string">            n2&gt;n3, buf[n1][n2]=buf[n2][1]+...+buf[n2][ni] (1&lt;i&lt;n2-n3-1)</span></span><br><span class="line"><span class="string">        3: </span></span><br><span class="line"><span class="string">            n2&lt;n3，取｜n2-n3｜, buf[n1][n2]=buf[n3][1]+...+buf[n3][ni] (1&lt;i&lt;|n2-n3|)</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  buf=[[<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,n+<span class="number">1</span>)] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,n+<span class="number">1</span>)]</span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        <span class="comment">#主处理</span></span><br><span class="line">          <span class="keyword">if</span> i-j&gt;<span class="number">1</span>:</span><br><span class="line">              buf[i][j]+=<span class="number">1</span></span><br><span class="line">              <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i-j):</span><br><span class="line">                  buf[i][j]+=buf[j][k]</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              buf[i][j]+=<span class="number">1</span></span><br><span class="line">          buf[i][j]%=<span class="number">10000</span></span><br><span class="line">         <span class="comment">#辅助处理</span></span><br><span class="line">      <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i):</span><br><span class="line">          buf[x][i]+=<span class="number">1</span></span><br><span class="line">          <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">abs</span>(x-i)):</span><br><span class="line">              buf[x][i]+=buf[i][y]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">sum</span>(buf[n])%<span class="number">10000</span></span><br></pre></td></tr></table></figure>
+
+<p>如图：n&#x3D;5时,buf的值为：</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gplt8cpfz3j304002wt8q.jpg" style="zoom:150%;" />
+
+<p>此方阵可以得到所有i&lt;&#x3D;n的结果，对buf[i]求和</p>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2020/07/02/PageTable/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2020/07/17/%E6%B5%85%E8%B0%88%E6%B5%AE%E7%82%B9%E6%95%B0/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="搜索">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>

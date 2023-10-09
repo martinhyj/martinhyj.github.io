@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="life study" />
+  <meta name="author" content="martin" />
+  <meta name="description" content="a man with dream" />
+  
+  
+  <title>
+    
+      python1 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="tuotuoliny" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">Hongbo</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="" href="https://github.com/martinhyj">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Oct 08, 2022
+  </h3>
+  <h1>
+    python1
+  </h1>
+  <div class="content markdown-body">
+    <h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+<ul>
+<li><a href="#python-ide">Python IDE</a></li>
+<li><a href="#python-%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E7%A7%AF%E7%B4%AF">Python 爬虫相关积累</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<hr>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ghrjlpy1tdj30i30bp0th.jpg" alt="Spider!!!!"></p>
+<h3 id="Python-IDE"><a href="#Python-IDE" class="headerlink" title="Python IDE"></a>Python IDE</h3><blockquote>
+<p>visual studio code(VsCode) </p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>PyCharm</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>IDLE(Shell)   </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="Python-爬虫相关积累"><a href="#Python-爬虫相关积累" class="headerlink" title="Python 爬虫相关积累"></a>Python 爬虫相关积累</h3><ul>
+<li><p>urllib(python3,urllib进行了统一)[^1]</p>
+<ul>
+<li>Request(请求)：构造代理</li>
+<li>Parse(解析)</li>
+</ul>
+</li>
+<li><p>BeautifulSoup   </p>
+<ul>
+<li>BeautifulSoup(解析网页)，操控标签      </li>
+<li>网页解析误区:(<a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/503566841.html">Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.</a>)</li>
+</ul>
+</li>
+<li><p>re[^2]</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Compile</td>
+<td align="center">compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象</td>
+</tr>
+<tr>
+<td align="center">Sub</td>
+<td align="center">用pattern的匹配项替换字符串中的指定字符</td>
+</tr>
+<tr>
+<td align="center">Match</td>
+<td align="center">尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none</td>
+</tr>
+<tr>
+<td align="center">Finall</td>
+<td align="center">在字符串中找到正则表达式所匹配的所有子串，并返回一个列表</td>
+</tr>
+<tr>
+<td align="center">Split</td>
+<td align="center">用pattern匹配的串分割字符串，返回列表</td>
+</tr>
+<tr>
+<td align="center">Search</td>
+<td align="center">扫描整个字符串并返回第一个成功的匹配</td>
+</tr>
+</tbody></table>
+<p> 参考网站：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/hongbo-tao/p/11853643.html">正则表达式基础</a> <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-reg-expressions.html">菜鸟教程</a></p>
+</li>
+<li><p>file(文件操作)[^3]</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Open</td>
+<td align="center">打开一个文件，并返回文件对象</td>
+</tr>
+<tr>
+<td align="center">Read</td>
+<td align="center">从文件读取指定的字节数，如果未给定或为负则读取所有</td>
+</tr>
+<tr>
+<td align="center">Write</td>
+<td align="center">将字符串写入文件，返回的是写入的字符长度</td>
+</tr>
+<tr>
+<td align="center">Close</td>
+<td align="center">关闭文件对象</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>参考网站:<a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-file-methods.html">菜鸟教程</a></p>
+<ul>
+<li><p>Selenium</p>
+<p> webdriver(模拟浏览器)：可抓取动态页面;在连续加载web页面时，应设置加载等待（显示等待WebDriverWait,，隐式等待implicitly_wait，强制等待(sleep)），否则在进行页面内容获取操作时，会得不到相关内容</p>
+<p> 参考网站：<a target="_blank" rel="noopener" href="http://www.selenium.org.cn/1598.html">官方教程</a> <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36279318/article/details/79475388">CSDN教程</a></p>
+</li>
+<li><p>xlwt</p>
+<ul>
+<li>Workbook(构造xls对象)：创建workbook、</li>
+<li>Add_sheet</li>
+<li>Write,read</li>
+</ul>
+</li>
+<li><p>Ajax( Asynchronous JavaScript and XML)在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/aspx/203251?fr=aladdin">aspx</a>:aspx文件是微软的在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8">服务器</a>端运行的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5">动态网页</a>文件，而不像静态的html文件。</p>
+</li>
+<li><p>多行语句的写法</p>
+<pre><code> 1：:每行以\结尾，\为续行符
+ 2：（），[], &#123;&#125;中无需使用\
+ 3：多行字符串（使用3引号或3双引号）：&quot;&quot;&quot; &quot;&quot;&quot;, &#39;&#39;&#39; &#39;&#39;&#39;,也可作为多行注释
+</code></pre>
+</li>
+<li><p>Lxml(css选择器 )</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">选择所有标签</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td align="center">选择<a>标签</td>
+<td align="center">a</td>
+</tr>
+<tr>
+<td align="center">选择所有class&#x3D;”link”的元素</td>
+<td align="center">.link</td>
+</tr>
+<tr>
+<td align="center">选择class&#x3D;”link”的<a>标签</td>
+<td align="center">a.link</td>
+</tr>
+<tr>
+<td align="center">选择id&#x3D;”home”的<a>标签</td>
+<td align="center">a#home</td>
+</tr>
+<tr>
+<td align="center">选择父元素为<a>标签的所有<span>标签</td>
+<td align="center">a &gt; span</td>
+</tr>
+<tr>
+<td align="center">选择<a>标签内部所有<span></td>
+<td align="center">a span</td>
+</tr>
+<tr>
+<td align="center">选择title属性为“home”的所有<a>标签</td>
+<td align="center">a[titile&#x3D;Home]</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>​       参考网址<a target="_blank" rel="noopener" href="https://lxml.de/">官网教程</a></p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
+<li><p>mysql</p>
+<ol>
+<li>python3可使用：pymysql</li>
+<li>sql语句的参数传递时，参数在字符串以外，理念同于C(printf(“%s %d % f”,string, int, float))</li>
+<li>Mysql语句中的占位符均为%s,</li>
+<li>Mysql的端口号为3306</li>
+<li>(Unknown column ‘xxxx’ in ‘field list’”)解决方法：在MySQL中，不论是更新还是插入一个字符，得用‘str’，而不是直接str，即获取字符串接收的方式是’str‘</li>
+</ol>
+</li>
+</ul>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2021/04/06/LinearAlgebra/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2023/10/08/singleton/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="搜索">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>
